@@ -39,11 +39,11 @@ python manage.py runserver
 
 
 
-![Home](https://github.com/TheCaffeineDev/Real-Estate-Django-Web-App/blob/master/screenshots/s1.JPG)
+![Home](https://github.com/nimadorostkar/Simple-Django-RealEstate/blob/master/screenshots/s1.JPG)
 
 
 
-![Listings](https://github.com/TheCaffeineDev/Real-Estate-Django-Web-App/blob/master/screenshots/s3list.JPG)
+![Admin](https://github.com/nimadorostkar/Simple-Django-RealEstate/blob/master/screenshots/s5adm.JPG)
 
 
 
