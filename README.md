@@ -12,7 +12,7 @@ A simple, reponsive website real estate listings built with `python` `django` `b
 git clone https://github.com/nimadorostkar/Simple-Django-RealEstate.git
 ```
 
-2.  **Make sure you are in *Real-Estate-Django-Web-App* folder**
+2.  **Make sure you are in *Simple-Django-RealEstate* folder**
 
    1. Install all dependencies
 
@@ -20,14 +20,14 @@ git clone https://github.com/nimadorostkar/Simple-Django-RealEstate.git
       pip install -r requirements.txt
       ```
 
-4. **Run Migrations**
+3. **Run Migrations**
 
 ```sh
 python manage.py makemigrations
 python manage.py migrate
 ```
 
-5. **Run Server**
+4. **Run Server**
 
 ```sh
 python manage.py runserver
@@ -35,12 +35,6 @@ python manage.py runserver
 
 
 
-
-
-
-**Backend**
-
-For Database I have used Postgres Database Name: real_estate
 
 Note: Please change those gmail credentials from real_estate folder you will get settings.py inside that file you will see username and password mentioned as place your Username and Password. Also do that same thing from Contacts folder views.py you will see YourEmail mentioned on line number 33.
 
