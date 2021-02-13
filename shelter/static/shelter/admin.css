@@ -1,0 +1,36 @@
+#header {
+    background-color: #95C41F;
+}
+#header h1 {
+    color: white;
+    float: right;
+    
+    margin: 6% 16px  0;
+
+    
+}
+#header #user-tools {
+    color: black;
+}
+div.breadcrumbs {
+    color: white;
+    background-color: #1f223e;
+}
+.module h2, .module caption, .inline-group h2 {
+    background-color: #1f223e;
+}
+a:link, a:visited {
+    color: black;
+}
+#content-related .module {
+    color: black;
+}
+.button, input[type=submit], input[type=button], .submit-row input, a.button {
+    background-color: #1f223e;
+}
+.button.default, input[type=submit].default, .submit-row input.default {
+    background-color: #1f223e;
+}
+.object-tools a:link, .object-tools a:visited {
+    background-color: #1f223e;
+}

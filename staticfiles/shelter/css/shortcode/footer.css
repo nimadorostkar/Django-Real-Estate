@@ -1,0 +1,170 @@
+/* -----------------------------------
+  Template Name: Sheltek - Real Estate HTML Template 
+
+  NOTE: This is Footer style file. All footer related style included in this file.
+
+--------------------------------------*/
+
+
+
+
+
+/* =================================
+  Footer
+================================= */
+.footer-area {
+  background-attachment: inherit;
+}
+.footer-widget {}
+.footer-titel {
+  color: #fefefe;
+  margin-bottom: 30px;
+  text-transform: uppercase;
+}
+/*footer-address*/
+.footer-address > li + li {
+    /*border-top: 1px solid #73716f;*/
+    padding-top: 15px;
+}
+.footer-address > li {
+    overflow: hidden;
+    padding-bottom: 10px;
+}
+.address-icon {
+    float: left;
+    width: 15%;
+}
+.address-info {
+    float: left;
+    width: 85%;
+}
+.address-info > span {
+  display: block;
+  font-size: 12px;
+  font-weight: 300;
+  line-height: 20px;
+}
+
+/*footer-latest-news*/
+.footer-widget.middle {
+  margin: auto;
+  width: calc(100% - 100px);
+}
+.footer-latest-news > li {
+    overflow: hidden;
+}
+.footer-latest-news > li + li {
+  padding-top: 34px;
+}
+.latest-news-image {
+    float: left;
+    width: 18%;
+}
+.latest-news-info {
+    float: left;
+    padding-left: 20px;
+    width: 82%;
+}
+.latest-news-info > p {
+  font-size: 12px;
+  line-height: 20px;
+  margin-bottom: 0;
+}
+.latest-news-info > h6 {
+  color: #c7c7c7;
+  font-family: 'montserrat';
+  font-size: 14px;
+  font-weight: 400;
+  line-height: 1;
+  margin-bottom: 5px;
+}
+
+/*footer-contact*/
+.footer-contact > p {
+  font-size: 12px;
+  line-height: 20px;
+}
+.footer-contact input {
+    border-color: #706e6d;
+    height: 35px;
+    font-size: 12px;
+}
+.footer-contact textarea {
+  background: transparent none repeat scroll 0 0;
+  border: 1px solid #706e6d;
+  box-shadow: none;
+  font-size: 12px;
+  font-weight: 300;
+  height: 80px;
+  line-height: 22px;
+  margin-bottom: 17px;
+  padding: 5px 10px;
+}
+.footer-contact button {
+    background: #c5c5c5 none repeat scroll 0 0;
+    color: #000000;
+    padding: 3px 15px;
+    text-transform: uppercase;
+    transition: all 0.3s ease 0s;
+}
+.footer-contact button:hover {
+  background: #95c41f none repeat scroll 0 0;
+  color: #fff;
+}
+.footer-contact input::-webkit-input-placeholder {
+  color: #919191;
+  font-size: 12px;
+}
+.footer-contact input::-moz-placeholder {
+  color: #919191;
+  font-size: 12px;
+}
+.footer-contact input:-ms-input-placeholder {
+  color: #919191;
+  font-size: 12px;
+}
+.footer-contact input:-moz-placeholder {
+  color: #919191;
+  font-size: 12px;
+}
+.footer-contact textarea::-webkit-input-placeholder {
+  color: #919191;
+  font-size: 12px;
+}
+.footer-contact textarea::-moz-placeholder {
+  color: #919191;
+  font-size: 12px;
+}
+.footer-contact textarea:-ms-input-placeholder {
+  color: #919191;
+  font-size: 12px;
+}
+.footer-contact textarea:-moz-placeholder {
+  color: #919191;
+  font-size: 12px;
+}
+/*copyright*/
+.footer-bottom {
+  background: rgba(23, 23, 23, 0.7) none repeat scroll 0 0;
+  border-top: 1px solid #484848;
+  padding: 20px 0;
+}
+.copyright > p {
+  font-size: 13px;
+  font-weight: 300;
+  margin-bottom: 0;
+}
+.copyright a {
+  color: #95c41f;
+}
+
+.address-info > span,
+.latest-news-info > p,
+.footer-contact > p,
+.footer-contact input,
+.footer-contact textarea,
+.copyright > p {
+  /*color: #919191;*/
+  color: #ccc;
+}
+

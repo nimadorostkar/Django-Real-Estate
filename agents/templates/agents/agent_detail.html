@@ -1,0 +1,140 @@
+{% extends 'shelter/base.html' %}
+{% load static %}
+<title>{% block title %}Agent Details {% endblock %}</title>
+{% block content %}
+    <!-- BREADCRUMBS AREA START -->
+    <div class="breadcrumbs-area bread-bg-1 bg-opacity-black-70">
+        <div class="container">
+            <div class="row">
+                <div class="col-xs-12">
+                    <div class="breadcrumbs">
+                        <h2 class="breadcrumbs-title">{{ agent.name }}</h2>
+                        <ul class="breadcrumbs-list">
+                            <li><a href="{% url 'index' %}">Home</a></li>
+                            <li><a href="{% url 'agents_list' %}">Agents</a></li>
+                            <li>{{ agent.name }}</li>
+                        </ul>
+                    </div>
+                </div>
+            </div>
+        </div>
+    </div>
+    <!-- BREADCRUMBS AREA END -->
+    <!-- AGENTS DETAILS ABOUT START -->
+    <div class="agents-details-about pt-115">
+        <div class="container">
+            <div class="row">
+                <div class="col-md-6 col-sm-12">
+                    <div class="agent-details-desc-info">
+                        <div class="agent-details-name">
+                            <h3>{{ agent.name }}</h3>
+                            <p>Real Estate Agent</p>
+                        </div>
+                        <div class="agent-details-brief">
+                            <p>{{ agent.description}}</p>
+                        </div>
+                        
+                    </div>
+                </div>
+                <div class="col-md-6 col-sm-12">
+                    <div class="row">
+                        <div class="col-md-6 col-sm-4">
+                            <div class="agent-details-image">
+                                <img src="{{ agent.photo.url }}" height="330" width="320" alt="">
+                            </div>
+                        </div>
+                        <div class="col-md-6 col-sm-8">
+                            <div class="agent-details-contact">
+                                <h5>Contact Details</h5>
+                                
+                                <h6>Phone</h6>
+                                <p><img src="{% static 'shelter/images/icons/phone-2.png' %}" alt="">{{ agent.phone}} </p>
+                                <h6>Email</h6>
+                                <p><img src="{% static 'shelter/images/icons/mail-close.png' %}" alt="">{{agent.email}}</p>
+                                <h6>Skype</h6>
+                                <p><img src="{% static 'shelter/images/icons/15.png' %}" alt="">skype id : {{agent.skype}}</p>
+                               
+                            </div>
+                        </div>
+                    </div>
+                </div>
+            </div>
+        </div>
+    </div>
+    <!-- AGENTS DETAILS ABOUT END -->
+
+    <!-- COUNTER AREA START -->
+    <div class="counter-area pt-60 pb-115">
+        <div class="container">
+            <div class="row">
+                <div class="col-md-8 col-md-offset-2">
+                    <div class="counter-item-content-2 text-center">
+                        <!-- counter-item -->
+                        <div class="counter-item-2">
+                            <h2>
+                                <i class="fa fa-home" aria-hidden="true"></i>
+                                <span class="counter">333</span>
+                            </h2>
+                            <p>Complete Project</p>
+                        </div>
+                        <!-- counter-item -->
+                        <div class="counter-item-2">
+                            <h2>
+                                <i class="fa fa-key" aria-hidden="true"></i>
+                                <span class="counter">454</span>
+                            </h2>
+                            <p>Property Sold</p>
+                        </div>
+                        <!-- counter-item -->
+                        <div class="counter-item-2">
+                            <h2>
+                                <i class="fa fa-smile-o" aria-hidden="true"></i>
+                                <span class="counter">565</span>
+                            </h2>
+                            <p>Happy Clients</p>
+                        </div>
+                    </div>
+                </div>
+            </div>
+        </div>
+    </div>
+    <!-- COUNTER AREA END -->
+     <!-- EXPERIENCE INQUIRY AREA START -->
+     <div class="experience-inquiry-area pb-115">
+        <div class="container">
+            <div class="row">
+                <div class="col-sm-6">
+                    <div class="experience">
+                        <h5>Wroking Experience</h5>
+                        <p>Momen Bhyuan ipsum dolor sit amet, consectetur adipiscing elit, sed domod tempor incididunt ut labore et dolore magna iqua. Ut enim ad minim venia nod exercitation ullamco laboris nisi utev </p>
+                        <div class="author-quote">
+                            <p>Lorem is a dummy text do eiusmod tempor dolor sit amet, onsec adip iscing elit, sed do eiusmod tempor incididunt ut labore et lorna aliqua Ut enim onsectetur </p>
+                            <p>Lorem is a dummy text do eiusmod tempor dolor sit amet, onsec adip iscing elit, sed do eiusmod tempor incididunt ut labore et lorna</p>
+                            <p>Lorem is a dummy text do eiusmod tempor dolor sit amet, onsec adip iscing elit, sed do eiusmod tempor incididunt ut labore et lorna</p>
+                            <p>Lorem is a dummy text do eiusmod tempor dolor sit amet, onsec adip iscing elit, sed do eiusmod tempor incididunt ut labore et lorna</p>
+                        </div>
+                    </div>
+                </div>
+                <div class="col-sm-6">
+                    <div class="inquery leave-review">
+                        <h5>Contact for any Inquiry</h5>
+                        <form action="#">
+                            <div class="row">
+                                <div class="col-md-6 col-xs-12">
+                                    <input type="text" name="name" placeholder="Your name">
+                                </div>
+                                <div class="col-md-6 col-xs-12">
+                                    <input type="email" name="email" placeholder="Email">
+                                </div>
+                            </div>
+                            <input type="text" name="phone" placeholder="Phone">
+                            <textarea placeholder="Write here"></textarea>
+                            <button type="button" class="submit-btn-1">SEND</button>
+                        </form>
+                    </div>
+                </div>
+            </div>
+        </div>
+    </div>
+    <!-- EXPERIENCE INQUIRY AREA END -->
+{% endblock %}

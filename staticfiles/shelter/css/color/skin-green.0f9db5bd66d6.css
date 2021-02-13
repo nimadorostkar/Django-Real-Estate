@@ -1,0 +1,336 @@
+/*
+
+Template:  Sheltek Real Estate HTML5 Template
+Author: http://devitems.com/
+Version: 1
+Design and Developed by: http://devitems.com/
+
+NOTE: This is color stylesheet of Color Scheme.
+
+*/
+
+
+/*************************
+    General
+*************************/
+
+
+/** selection **/
+
+*::-moz-selection {
+    background: #50C1F0;
+    color: #fff;
+    text-shadow: none;
+}
+
+::-moz-selection {
+    background: #50C1F0;
+    color: #fff;
+    text-shadow: none;
+}
+
+::selection {
+    background: #50C1F0;
+    color: #fff;
+    text-shadow: none;
+}
+
+
+
+/*=====================================*/
+
+
+a:focus,
+a:hover {
+  color: #4caf50;
+  text-decoration: none;
+}
+
+.main-menu > li:hover > a,
+.drop-menu > li:hover > a,
+.single-mega-item > li:hover > a,
+.transparent-header .main-menu > li:hover > a,
+.copyright a,
+.slider-1-title-1 span,
+.price,
+.counter-item i,
+.counter-item-2 i,
+.tweets-item > p > a,
+.tweet-brief a,
+.text-theme,
+.single-agent:hover .agent-info-hover .agent-name h5,
+.error-content h2 {
+    color: #4caf50;
+}
+
+.drop-menu,
+.mega-menu-area,
+.find-home-box {
+  border-bottom: 4px solid #4caf50;
+}
+
+.nivo-directionNav a:hover,
+.nivo-controlNav a.active,
+.slider-button:hover,
+.mark, mark,
+#scrollUp:hover,
+.bg-theme,
+.call-to-bg::before,
+.ui-slider .ui-slider-range,
+.ui-state-default, .ui-widget-content .ui-state-default, .ui-widget-header .ui-state-default,
+.flat-link > a:hover,
+.button-1,
+.pagination-list > li a:hover,
+.submit-btn-1,
+.widget-search button:hover,
+.blog-details-title-time::before,
+.blog-quote::before,
+.line-bottom::before,
+.go-home:hover,
+.dots-right-btm .slick-dots li.slick-active button,
+.subscribe button,
+.footer-contact button:hover,
+.blog-item:hover .post-title-time::before,
+.for-sale {
+  background: #4caf50 none repeat scroll 0 0;
+}
+
+.slider-button:hover,
+.flat-link > a:hover,
+.button-1,
+.brand-item:hover,
+.go-home:hover {
+  border: 1px solid #4caf50;
+}
+
+input[type="text"]:focus,
+input[type="email"]:focus,
+input[type="password"]:focus,
+textarea:focus,
+.footer-contact textarea:focus {
+  border: 1px solid #4caf50;
+}
+
+.single-agent:hover {
+  border-color:#4caf50;
+}
+
+.blog-item:hover .blog-info,
+.blog-item:hover .blog-info a {
+  border-color: #4caf50;
+  color: #4caf50;
+}
+
+
+
+
+
+
+
+
+
+/*-----------------------------------------------------------------------------------
+
+  Template Name: Subas Ecommerce Responsive Bootstrap Template
+  Description: This is html5 template
+  Author: codecarnival
+  Version: 1.0
+  Design and Developed by: codecarnival
+
+-----------------------------------------------------------------------------------*/
+.theme-bg {background-color: #4caf50;}
+.blog-item .blog-desc {
+  background: rgba(76, 175, 80, 0.95) none repeat scroll 0 0;
+}
+.mark, mark {
+  background: #4caf50 none repeat scroll 0 0;
+}
+.mean-container .mean-nav ul li a:hover {
+  color: #4caf50;
+}
+textarea:focus {
+  border-color: #4caf50;
+}
+.up-comming-time .time-count {
+  border: 1px solid #4caf50;
+}
+.contact-address:hover i {
+  background: #4caf50 none repeat scroll 0 0;
+}
+span.tooltip-content {
+  color: #4caf50;
+}
+a.button {
+  background: #4caf50;
+}
+.pro-tab-menu ul li.active a {
+  border-bottom: 1px solid #4caf50;
+}
+.nivo-controlNav a.active {
+  background: #4caf50 none repeat scroll 0 0;
+}
+.submit-btn-1 {
+  background: #4caf50;
+}
+.header-search-inner::before {
+  background: #4caf50 none repeat scroll 0 0;
+}
+
+input[type="text"]:focus,
+input[type="password"]:focus {
+  border: 1px solid #4caf50;
+}
+
+
+
+
+
+/*default*/
+a:focus,
+a:hover {
+    color: #4caf50;
+    text-decoration: none;
+}
+.text-theme { color: #4caf50; }
+.btn-hover-2::before {
+  background: #4caf50 none repeat scroll 0 0;
+}
+.slick-arrow-1 .slick-arrow:hover {
+  color: #4caf50;
+}
+.slick-arrow-2 .arrow-prev.slick-arrow:hover, .slick-arrow-2 .arrow-next.slick-arrow:hover {
+  color: #4caf50;
+  border-color: #4caf50;
+}
+.slick-arrow-3 .arrow-prev.slick-arrow:hover, .slick-arrow-3 .arrow-next.slick-arrow:hover {
+  color: #4caf50;
+}
+.slick-dots-1 .slick-dots li.slick-active {
+  background: #4caf50;
+}
+.quick-add-to-cart .single_add_to_cart_button:hover {
+  background: #4caf50 none repeat scroll 0 0;
+}
+#scrollUp:hover {
+  background: #4caf50 none repeat scroll 0 0;
+}
+/*header*/
+.main-menu > li:hover > a{
+  color: #4caf50;
+} 
+.dropdwn > li:hover > a{
+  color: #4caf50;
+}
+.main-menu > li > a::before, .dropdwn li a::before, .single-mega-item li a::before {
+  background: #4caf50 none repeat scroll 0 0;
+}
+.single-mega-item > li:hover > a{
+  color: #4caf50;
+} 
+.sticky .main-menu > li:hover > a{
+  color: #4caf50;
+}
+.total-cart-in:hover .cart-toggler > a {
+  color: #4caf50;
+}
+.del-icon > a:hover > i {
+  color: #4caf50;
+}
+.top-cart-inner.subtotal span {
+  color: #4caf50;
+}
+.user-meta > li > ul > li > a:hover {
+  color: #4caf50;
+}
+/*footer*/ 
+.footer-menu li:hover a, .footer-menu li:hover a i {
+  color: #4caf50;
+}
+.border-left::before {
+  background: #4caf50 none repeat scroll 0 0;
+}
+.copyright-text p a:hover {
+  color: #4caf50;
+}
+.footer-menu-2 li::before {
+  background: #4caf50 none repeat scroll 0 0;
+}
+/*Theme */
+.pro-rating a {
+  color: #4caf50;
+}
+.action-button > li:hover > a {
+  background: #4caf50;
+  border-color: #4caf50;
+}
+.banner-button a:hover {
+  color: #4caf50;
+}
+.product-item-2 .action-button > li:hover > a {
+  color: #4caf50;
+}
+.pro-tab-menu-2 ul li.active::before {
+  background: #4caf50 none repeat scroll 0 0;
+}
+.breadcrumb-list > li:hover::before {
+  color: #4caf50; 
+}
+.breadcrumb-list > li:hover > a {
+  color: #4caf50;
+}
+.shop-tab li.active a {
+  color: #4caf50;
+}
+.shop-pagination > li.active a,
+.shop-pagination > li:hover a {
+  border-color: #4caf50;
+  color: #4caf50;
+}
+.widget-search button:hover {
+  color: #4caf50;
+}
+.product-cat .treeview .collapsable > a {
+  color: #4caf50;
+}
+.ui-slider .ui-slider-range {
+  background: #4caf50 none repeat scroll 0 0;
+}
+.ui-state-default, .ui-widget-content .ui-state-default, .ui-widget-header .ui-state-default {
+  background: #4caf50 none repeat scroll 0 0;
+}
+.widget-color ul li::before {
+  background: #4caf50 none repeat scroll 0 0;
+}
+.p-c a.active img {
+  border: 1px solid #4caf50;
+}
+.cart-tab li a.active {
+  color: #4caf50;
+}
+.cart-tab li a.active span {
+  border: 1px solid #4caf50;
+}
+.product-remove a:hover {
+  color: #4caf50;
+}
+.product-add-cart a:hover {
+  color: #4caf50;
+}
+.order-total {
+  color: #4caf50;
+}
+.order-total-price {
+  color: #4caf50;
+}
+.widget-tags-list li:hover a {
+  color: #4caf50;
+}
+.blog-like-share li a:hover {
+  color: #4caf50;
+}
+.reply-delate li:hover a {
+  color: #4caf50;
+}
+.bg-shape:hover:before {
+ background: #4caf50 none repeat scroll 0 0;
+}

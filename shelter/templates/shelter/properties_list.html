@@ -1,0 +1,89 @@
+{% extends 'shelter/base.html' %}
+{% load static %}
+<title>{% block title %}  Shelter |All Properties {% endblock %}</title>
+{%  block content %}
+     <!-- BREADCRUMBS AREA START -->
+     <div class="breadcrumbs-area bread-bg-1 bg-opacity-black-70">
+        <div class="container">
+            <div class="row">
+                <div class="col-xs-12">
+                    <div class="breadcrumbs">
+                        <h2 class="breadcrumbs-title">Properties</h2>
+                        <ul class="breadcrumbs-list">
+                            <li><a href="{% url 'index' %}">Home</a></li>
+                            <li>Properties</li>
+                        </ul>
+                    </div>
+                </div>
+            </div>
+        </div>
+    </div>
+    <!-- BREADCRUMBS AREA END -->
+    <section id="page-content" class="page-wrapper">
+        <!-- FEATURED FLAT AREA START -->
+        <div class="featured-flat-area pt-115 pb-80">
+            <div class="container">
+                
+                <div class="featured-flat" id="loadcontent">
+                    <div class="row">
+                    {% for home in homes %}
+                        <!-- flat-item -->
+                        <div class="col-md-4 col-sm-6 col-xs-12">
+                            <div class="flat-item">
+                                <div class="flat-item-image">
+                                    <span class="for-sale">{{ home.status}}</span>
+                                    <a href="{% url 'property_detail' home.slug %}"><img src="{{ home.image.url }}" width="368px" height="250px" alt=""></a>
+                                    <div class="flat-link">
+                                        <a href="{% url 'property_detail' home.slug %}">More Details</a>
+                                    </div>
+                                    <ul class="flat-desc">
+                                        <li>
+                                            <img src="{% static 'shelter/images/icons/4.png' %}" alt="">
+                                            <span>{{ home.area }}</span>
+                                        </li>
+                                        <li>
+                                            <img src="{% static 'shelter/images/icons/5.png' %}" alt="">
+                                            <span>{{ home.bedrooms}}</span>
+                                        </li>
+                                        <li>
+                                            <img src="{% static 'shelter/images/icons/6.png' %}" alt="">
+                                            <span>{{ home.bathrooms}}</span>
+                                        </li>
+                                    </ul>
+                                </div>
+                                <div class="flat-item-info">
+                                    <div class="flat-title-price">
+                                        <h5><a href="{% url 'property_detail' home.slug %}">{{ home.title }} </a></h5>
+                                        <span class="price">${{ home.price }}</span>
+                                    </div>
+                                    <p><img src="{% static 'shelter/images/icons/location.png' %}" alt="">{{ home.location}}</p>
+                                </div>
+                            </div>
+                        </div>
+                    
+                    {% endfor %} 
+                    </div>
+                </div>
+                <!-- pagination-area -->
+                <!-- <div class="col-xs-12">
+                    <div class="pagination-area mb-60">
+                        <ul class="pagination-list text-center">
+                            <li><a href="#"><i class="fa fa-angle-left" aria-hidden="true"></i></a></li>
+                            <li><a href="#">1</a></li>
+                            <li><a href="#">2</a></li>
+                            <li><a href="#"><i class="fa fa-angle-right" aria-hidden="true"></i></a></li>
+                            
+                        </ul>
+                       
+                    </div>
+                </div> -->
+                <div style="padding-left: 35%; padding-right:40%;">
+                    
+                    <a  class="button-1 btn-block  " href="{% url 'properties_list' %}">Load More</a>
+                </div>
+                
+            </div>
+        </div>
+        
+    </section>
+{% endblock %}

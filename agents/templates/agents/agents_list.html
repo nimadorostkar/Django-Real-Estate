@@ -1,0 +1,71 @@
+{% extends 'shelter/base.html' %}
+{% load static %}
+<title>{% block title %} Shelter | Agents List {% endblock %}</title>
+{% block content %}
+    <!-- BREADCRUMBS AREA START -->
+    <div class="breadcrumbs-area bread-bg-1 bg-opacity-black-70">
+        <div class="container">
+            <div class="row">
+                <div class="col-xs-12">
+                    <div class="breadcrumbs">
+                        <h2 class="breadcrumbs-title">Agent</h2>
+                        <ul class="breadcrumbs-list">
+                            <li><a href="{% url 'index' %}">Home</a></li>
+                            <li>Agent</li>
+                        </ul>
+                    </div>
+                </div>
+            </div>
+        </div>
+    </div>
+    <!-- BREADCRUMBS AREA END -->
+    <!-- Start page content -->
+    <section id="page-content" class="page-wrapper">
+            
+        <!-- OUR AGENTS AREA START -->
+        <div class="our-agents-area  pt-115 pb-60">
+            <div class="container">
+                <div class="our-agents">
+                    <div class="row">
+                        <div class="agents-carousel=2">
+                            <!-- single-agent -->
+                            {% for agent in agents %}
+                                <div class="col-md-3 col-sm-4 col-xs-12">
+                                    <div class="single-agent">
+                                        <div class="agent-image">
+                                            <img src="{{ agent.photo.url }}" alt="">
+                                        </div>
+                                        <div class="agent-info">
+                                            <div class="agent-name">
+                                                <h5><a href="#">{{ agent.name }}</a></h5>
+                                                <p>Real Estate Agent</p>
+                                            </div>
+                                        </div>
+                                        <div class="agent-info-hover">
+                                            <div class="agent-name">
+                                                <h5><a href="{% url 'agent_detail' agent.id %}">{{ agent.name }}</a></h5>
+                                                <p>Real Estate Agent</p>
+                                            </div>
+                                            <ul class="agent-address">
+                                                <li><img src="{% static 'shelter/images/icons/phone-2.png' %}" alt="">{{ agent.phone }} </li>
+                                                <li><img src="{% static 'shelter/images/icons/mail-close.png' %}" alt="">{{ agent.email }}</li>
+                                            </ul>
+                                            <ul class="social-media">
+                                                <li><a href="{{ agent.facebook }}"><i class="fa fa-facebook" aria-hidden="true"></i></a></li>
+                                                <li><a href="{{ agent.twitter }}"><i class="fa fa-twitter" aria-hidden="true"></i></a></li>
+                                                <li><a href="{{ agent.skype }}"><i class="fa fa-skype" aria-hidden="true"></i></a></li>
+                                                
+                                            </ul>
+                                        </div>
+                                    </div>
+                                </div>
+                            {% endfor %}
+                        </div>
+                    </div>
+                </div>
+            </div>
+        </div>
+        <!-- OUR AGENTS AREA END -->   
+    </section>
+    <!-- End page content -->
+{% endblock %}

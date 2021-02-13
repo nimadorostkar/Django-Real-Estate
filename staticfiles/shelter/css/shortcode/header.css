@@ -1,0 +1,269 @@
+/* -----------------------------------
+  Template Name: Sheltek - Real Estate HTML Template 
+
+  NOTE: This is Header style file. All Header related style included in this file.
+
+--------------------------------------*/
+
+/*logo*/
+.logo {
+  padding: 13px 0;
+}
+
+/*company-info*/
+.company-info {
+  padding: 39px 0;
+}
+.company-info-item {
+    float: left;
+    overflow: hidden;
+    width: 50%;
+}
+.header-icon {
+    float: left;
+    width: 18%;
+}
+.header-info {
+    float: left;
+    width: 82%;
+}
+.company-info .company-info-item:nth-child(2) {
+  padding-left: 5%;
+}
+
+
+.header-info h6 {
+  font-family: montserrat;
+  line-height: 15px;
+  margin-bottom: 5px;
+}
+.header-info p {
+  color: #606060;
+  font-size: 12px;
+  font-weight: 300;
+  line-height: 12px;
+  margin-bottom: 0;
+}
+
+/*header-search*/
+.header-search {
+  padding: 40px 0;
+}
+.header-search button {
+    float: left;
+    height: 30px;
+    width: 18%;
+}
+.header-search input {
+  border: 1px solid #1f223e;
+  box-shadow: none;
+  color: #303030;
+  float: left;
+  font-weight: 300;
+  height: 30px;
+  margin-bottom: 0;
+  padding-left: 15px;
+  width: 82%;
+}
+.header-search input::-webkit-input-placeholder { /* Chrome/Opera/Safari */
+  color: #303030;
+  opacity: 1;
+}
+.header-search input::-moz-placeholder { /* Firefox 19+ */
+  color: #303030;
+  opacity: 1;
+}
+.header-search input:-ms-input-placeholder { /* IE 10+ */
+  color: #303030;
+  opacity: 1;
+}
+.header-search input:-moz-placeholder { /* Firefox 18- */
+  color: #303030;
+  opacity: 1;
+}
+
+
+
+
+
+
+
+
+
+
+
+
+
+/*menu style */
+.header-area{
+	z-index: 10;
+	position: relative;
+}
+/*.main-menu > li > a {
+  color: #303030;
+  display: block;
+  padding: 40px 20px;
+  text-transform: uppercase;
+}*/
+.main-menu > li + li {
+  margin-left: 55px;
+}
+.main-menu > li > a {
+  color: #1f223e;
+  display: block;
+  font-size: 16px;
+  padding: 15px 0;
+  text-transform: uppercase;
+}
+.main-menu li {
+    display: inline-block;
+    position: relative;
+}
+.main-menu > li:hover > a,
+.drop-menu > li:hover > a,
+.single-mega-item > li:hover > a {
+	color: #95c41f;
+} 
+/*drop-menu Style*/
+.drop-menu {
+  background: #ffffff none repeat scroll 0 0;
+  border-bottom: 4px solid #95c41f;
+  box-shadow: 0 1px 2px rgba(86, 86, 90, 0.5);
+  left: 0;
+  position: absolute;
+  text-align: left;
+  top: 100%;
+  transform: scaleY(0);
+  transform-origin: 0 0 0;
+  transition: all 0.3s ease 0s;
+  visibility: hidden;
+  width: 250px;
+  z-index: 2;
+}
+.menu-right {
+  left: auto;
+  right: 0;
+}
+.drop-menu li {
+  border-bottom: 1px solid #e1e1e1;
+  display: block;
+}
+.drop-menu li a {
+  display: block;
+  font-size: 12px;
+  padding: 8px 20px;
+  text-transform: uppercase;
+}
+.main-menu li:hover .drop-menu{
+	transform: scale(1);
+	visibility: visible;
+}
+/*Mega menu style*/
+/*#primary-menu {
+  position: relative;
+}*/
+.mega-menu-area {
+  background: #ffffff none repeat scroll 0 0;
+  border-bottom: 4px solid #95c41f;
+  box-shadow: 0 1px 2px rgba(86, 86, 90, 0.5);
+  left: 0;
+  padding-bottom: 10px;
+  position: absolute;
+  text-align: left;
+  top: 100%;
+  transform: scaleY(0);
+  transform-origin: 0 0 0;
+  transition: all 0.3s ease 0s;
+  visibility: hidden;
+  width: 100%;
+  z-index: 2;
+}
+.main-menu li.mega-parent {
+    position: static;
+}
+.single-mega-item {
+    float: left;
+    width: 25%;
+    padding: 0 15px;
+}
+.single-mega-item li {
+    display: block;
+    border-bottom: 1px solid #e5e5e5;
+}
+.single-mega-item li:last-child{
+	border-bottom: 0px solid #000;
+} 
+.single-mega-item li a{
+  padding: 13px 0px;
+	display: block;
+  font-weight: 300;
+}
+.main-menu li:hover .mega-menu-area{
+	transform: scale(1);
+	visibility: visible;
+}
+.header-middle-area .container .row [class*="col-"] {
+	position: static;
+ }
+ .header-middle-area .full-width-mega-drop-menu{
+ 	position: relative;
+ }
+/*====================================================================*/
+.drop-menu-right {
+  left: auto;
+  right: 0;
+}
+/*====================================================================*/
+
+/*Header Transprent */
+.transparent-header{
+  position: absolute;
+  width: 100%;
+  margin: auto;
+  background: rgba(31, 34, 62, 0.9) none repeat scroll 0 0;
+  transition: all 0.3s ease 0s;
+}
+.transparent-header .main-menu > li > a{
+  color: #fff;
+}
+.transparent-header .main-menu > li:hover > a {
+  color: #95c41f;
+}
+.transparent-header.sticky{
+	background: rgba(255, 255, 255, 1);
+	box-shadow: 0 1px 3px rgba(50, 50, 50, 0.4)
+}
+/*Sticky Menu*/
+.sticky {
+  left: 0;
+  margin: auto;
+  position: fixed;
+  top: 0;
+  width: 100%;
+  background: rgba(255,255,255,0.8);
+  box-shadow: 0 1px 3px rgba(50, 50, 50, 0.4);
+}
+.sticky .main-menu > li > a {
+  color: #303030;
+  font-size: 14px;
+  padding: 18px 0;
+}
+.sticky .main-menu > li + li {
+  margin-left: 40px;
+}
+.sticky .main-menu {
+  text-align: right;
+}
+.sticky-logo img {
+  display: none;
+  transition: all 0.3s ease 0s;
+}
+.sticky .sticky-logo img {
+  display: block;
+  float: left;
+  padding: 10px 0;
+  width: 70px;
+}
+
+
+

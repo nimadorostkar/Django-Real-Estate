@@ -1,0 +1,484 @@
+{% extends 'shelter/base.html' %}
+{% load static %}
+{% block content %}
+    <div class="slider-1 pos-relative slider-overlay">
+        <div class="bend niceties preview-1">
+            <div id="ensign-nivoslider-3" class="slides">   
+                <img src="{% static 'shelter/images/slider/1.jpg' %}" alt="" title="#slider-direction-1"  />
+                <img src="{% static 'shelter/images/slider/2.jpg' %}" alt="" title="#slider-direction-2"  />
+                <img src="{% static 'shelter/images/slider/1.jpg' %}" alt="" title="#slider-direction-3"  />
+            </div>
+            <!-- direction 1 -->
+            <div id="slider-direction-1" class="slider-direction">
+                <div class="slider-content text-center">
+                    <div class="wow fadeInUp" data-wow-duration="1s" data-wow-delay="0.5s">
+                        <h4 class="slider-1-title-1">Welcome to <span>Sheltek</span></h4>
+                    </div>
+                    <div class="wow fadeInUp" data-wow-duration="1s" data-wow-delay="1s">
+                        <h1 class="slider-1-title-2">FIND YOUR DREAM HOUSE WITH US</h1>
+                    </div>
+                    <div class="wow fadeInUp" data-wow-duration="1s" data-wow-delay="1.5s">
+                        <p class="slider-1-desc">Lorem consectetur adipiscing elit, sed do eiusmod tempor dolor sit amet <br> contetur  adipiscing elit, sed do  eiusmod tempor incididunt </p>
+                    </div>
+                    <div class="wow fadeInUp" data-wow-duration="1s" data-wow-delay="2s">
+                        <a class="slider-button mt-40" href="#">Read More</a>
+                    </div>
+                </div>
+            </div>
+            <!-- direction 2 -->
+            <div id="slider-direction-2" class="slider-direction">
+                <div class="slider-content text-left">
+                    <div class="wow fadeInUp" data-wow-duration="1s" data-wow-delay="0.5s">
+                        <h4 class="slider-1-title-1">Welcome to <span>Sheltek</span></h4>
+                    </div>
+                    <div class="wow fadeInUp" data-wow-duration="1s" data-wow-delay="1s">
+                        <h1 class="slider-1-title-2">FIND YOUR DREAM HOUSE WITH US</h1>
+                    </div>
+                    <div class="wow fadeInUp" data-wow-duration="1s" data-wow-delay="1.5s">
+                        <p class="slider-1-desc">Lorem consectetur adipiscing elit, sed do eiusmod tempor dolor sit amet <br> contetur  adipiscing elit, sed do  eiusmod tempor incididunt </p>
+                    </div>
+                    <div class="wow fadeInUp" data-wow-duration="1s" data-wow-delay="2s">
+                        <a class="slider-button mt-40" href="#">Read More</a>
+                    </div>
+                </div>
+            </div>
+            <!-- direction 2 -->
+            <div id="slider-direction-3" class="slider-direction">
+                <div class="slider-content text-right">
+                    <div class="wow fadeInUp" data-wow-duration="1s" data-wow-delay="0.5s">
+                        <h4 class="slider-1-title-1">Welcome to <span>Sheltek</span></h4>
+                    </div>
+                    <div class="wow fadeInUp" data-wow-duration="1s" data-wow-delay="1s">
+                        <h1 class="slider-1-title-2">FIND YOUR DREAM HOUSE WITH US</h1>
+                    </div>
+                    <div class="wow fadeInUp" data-wow-duration="1s" data-wow-delay="1.5s">
+                        <p class="slider-1-desc">Lorem consectetur adipiscing elit, sed do eiusmod tempor dolor sit amet <br> contetur  adipiscing elit, sed do  eiusmod tempor incididunt </p>
+                    </div>
+                    <div class="wow fadeInUp" data-wow-duration="1s" data-wow-delay="2s">
+                        <a class="slider-button mt-40" href="#">Read More</a>
+                    </div>
+                </div>
+            </div>
+        </div>
+    </div>
+
+     <!-- FIND HOME AREA START -->
+    <div class="find-home-area bg-blue call-to-bg plr-140 pt-60 pb-20">
+        <div class="container-fluid">
+            <div class="row">
+                <div class="col-md-3 col-xs-12">
+                    <div class="section-title text-white">
+                        <h3>FIND YOUR</h3>
+                        <h2 class="h1">HOME HERE</h2>
+                    </div>
+                </div>
+                <div class="col-md-9 col-xs-12">
+                    <div class="find-homes">
+                    <form action="{% url 'search' %}" method="GET">
+                       
+                        <div class="row">
+                            <div class="col-sm-3 col-xs-12">
+                                <div class="find-home-item">
+                                    <input type="text" name="keyword" placeholder="Enter Keyword">
+                                </div>
+                            </div>
+
+                            <div class="col-sm-3 col-xs-12">
+                                <div class="find-home-item custom-select">                  
+                                    <select class="selectpicker" title="Location" data-hide-disabled="true" data-live-search="true" name="location">
+                                       {% for location_key,location_value in search_locations.items %}
+                                        <option>{{ location_value }}</option>
+                                       {% endfor %}
+                                       
+                                    </select>
+                                </div>
+                            </div>
+                        
+                           
+                            
+                            <div class="col-sm-3 col-xs-12">
+                                <div class="find-home-item  custom-select">                  
+                                    <select class="selectpicker" title="No. of Bedrooms" data-hide-disabled="true" name="bedrooms">
+                                        <optgroup >
+                                            <option>1</option>
+                                            <option>2</option>
+                                            <option>3</option>
+                                            <option>4</option>
+                                            <option>5</option>
+                                            <option>6</option>
+                                        </optgroup>
+                                    </select>
+                                </div> 
+                            </div>
+                            <div class="col-sm-3 col-xs-12">
+                                <div class="find-home-item custom-select">                  
+                                    <select class="selectpicker" title="No. of Bathrooms" data-hide-disabled="true" name="bathrooms">
+                                        <optgroup >
+                                            <option>1</option>
+                                            <option>2</option>
+                                            <option>3</option>
+                                            <option>4</option>
+                                            <option>5</option>
+                                        </optgroup>
+                                    </select>
+                                </div>
+                            </div>
+                            
+                            <div class="col-sm-6 col-xs-12">
+                                <div class="row">
+                                    <div class="col-sm-6 col-xs-12">
+                                        <div class="find-home-item custom-select">                  
+                                            <select class="selectpicker" title="Select Max Price" data-hide-disabled="true" name="price">
+                                                <optgroup >
+                                                    <option>$1000</option>
+                                                    <option>$2000</option>
+                                                    <option>$3000</option>
+                                                    <option>$4000</option>
+                                                    <option>$6000</option>
+                                                    <option>$7000</option>
+                                                    <option>$8000</option>
+                                                    <option>$9000</option>
+                                                    <option>$10000</option>
+                                                </optgroup>
+                                            </select>
+                                        </div>
+                                    </div>
+                                    
+                                    <div class="col-sm-5 col-xs-12">
+                                        <div class="find-home-item mb-0-xs">
+                                            <button class="button-1 btn-block btn-hover-1" >SEARCH</button>
+                                        </div>
+                                    </div>
+                                </div>
+                            </div>
+                        </div>
+                    </form>
+                    </div>
+                </div>
+            </div>
+        </div>
+    </div>
+    <!-- FIND HOME AREA END -->
+   
+     <!-- ABOUT SHELTEK AREA START -->
+     <div class="about-sheltek-area ptb-115">
+        <div class="container">
+            <div class="row">
+                <div class="col-sm-6 col-xs-12">
+                    <div class="section-title mb-30">
+                        <h3>SOME WORD </h3>
+                        <h2>ABOUT SHELTEK</h2>
+                    </div>
+                    <div class="about-sheltek-info">
+                        <p><span data-placement="top" data-toggle="tooltip" data-original-title="The name you can trust" class="tooltip-content">Sheltek</span> is the best theme for  elit, sed do eiusmod tempor dolor sit amet, conse ctetur adipiscing elit, sed do eiusmod tempor incididunt ut labore et lorna aliquatd minim veniam, quis nostrud exercitation oris nisi ut aliquip ex ea commodo consequat. Duis aute irure dolo.</p>
+                        <p>Lorem is a dummy text do eiusmod tempor dolor sit amet, onsectetur adip iscing elit, sed do eiusmod tempor incididunt ut labore et lorna aliqua Ut enim onsectetur </p>
+                        <p>Lorem is a dummy text do eiusmod tempor dolor sit amet, onsectetur adip iscing elit, sed do eiusmod tempor incididunt ut labore et lorna aliqua Ut enim onsectetur </p>
+                    </div>
+                </div>
+                <div class="col-sm-6 col-xs-12">
+                    <div class="about-image">
+                        <a href="#"><img src="{% static 'shelter/images/about/1.jpg' %}" alt=""></a>
+                    </div>
+                </div>
+            </div>
+        </div>
+    </div>
+    <!-- ABOUT SHELTEK AREA END -->
+
+     <!-- SERVICES AREA START -->
+     <div class="services-area pb-60">
+        <div class="container">
+            <div class="row">
+                <div class="col-md-12">
+                    <div class="section-title-2 text-center">
+                        <h2>OUR SERVICES</h2>
+                        <p>Sheltek is the best theme for  elit, sed do eiusmod tempor dolor sit amet, conse ctetur adipiscing elit, sed do eiusmod tempor incididunt ut labore et lorna aliquatd minim veniam, quis nostrud</p>
+                    </div>
+                </div>
+            </div>
+            <div class="row">
+                <div class="service-carousel">
+                    <!-- service-item -->
+                    <div class="col-md-12">
+                        <div class="service-item">
+                            <div class="service-item-image">
+                                <a href="#"><img src="{% static 'shelter/images/service/1.jpg' %}" alt=""></a>
+                            </div>
+                            <div class="service-item-info">
+                                <h5><a href="#">Sale Property</a></h5>
+                                <p>Property sale best theme for litdo eiusmod tempor dolor sit amet, conse tetur adiping eiusmo</p>
+                            </div>
+                        </div>
+                    </div>
+                    <!-- service-item -->
+                    <div class="col-md-12">
+                        <div class="service-item">
+                            <div class="service-item-image">
+                                <a href="#"><img src="{% static 'shelter/images/service/2.jpg' %}" alt=""></a>
+                            </div>
+                            <div class="service-item-info">
+                                <h5><a href="#">Buy Property</a></h5>
+                                <p>Property sale best theme for litdo eiusmod tempor dolor sit amet, conse tetur adiping eiusmo</p>
+                            </div>
+                        </div>
+                    </div>
+                    <!-- service-item -->
+                    <div class="col-md-12">
+                        <div class="service-item">
+                            <div class="service-item-image">
+                                <a href="#"><img src="{% static 'shelter/images/service/3.jpg' %}" alt=""></a>
+                            </div>
+                            <div class="service-item-info">
+                                <h5><a href="#">Rent Property</a></h5>
+                                <p>Property sale best theme for litdo eiusmod tempor dolor sit amet, conse tetur adiping eiusmo</p>
+                            </div>
+                        </div>
+                    </div>
+                    <!-- service-item -->
+                    <div class="col-md-12">
+                        <div class="service-item">
+                            <div class="service-item-image">
+                                <a href="#"><img src="{% static 'shelter/images/service/4.jpg' %}" alt=""></a>
+                            </div>
+                            <div class="service-item-info">
+                                <h5><a href="#">Property Management</a></h5>
+                                <p>Property sale best theme for litdo eiusmod tempor dolor sit amet, conse tetur adiping eiusmo</p>
+                            </div>
+                        </div>
+                    </div>
+                    <!-- service-item -->
+                    <div class="col-md-12">
+                        <div class="service-item">
+                            <div class="service-item-image">
+                                <a href="#"><img src="{% static 'shelter/images/service/4.jpg' %}" alt=""></a>
+                            </div>
+                            <div class="service-item-info">
+                                <h5><a href="#">Sale Property</a></h5>
+                                <p>Property sale best theme for litdo eiusmod tempor dolor sit amet, conse tetur adiping eiusmo</p>
+                            </div>
+                        </div>
+                    </div>
+                </div>
+            </div>
+        </div>
+    </div>
+    <!-- SERVICES AREA END -->
+
+     <!-- BOOKING AREA START -->
+     <div class="booking-area bg-1 call-to-bg plr-140 pt-75">
+        <div class="container-fluid">
+            <div class="row">
+                <div class="col-md-3 col-sm-4 col-xs-12">
+                    <div class="section-title text-white">
+                        <h3>BOOK YOUR</h3>
+                        <h2 class="h1">HOME HERE</h2>
+                    </div>
+                </div>
+                <div class="col-md-9 col-sm-8 col-xs-12">
+                    <div class="booking-conternt clearfix">
+                        <div class="book-house text-white">
+                            <h2>BOOK YO`UR APPARTMENT OR HOUSE </h2>
+                            <h2 class="h5">CALL US ON : +0306  228  1637  </h2>
+                        </div>
+                        <div class="booking-imgae">
+                            <img src="{% static 'shelter/images/others/booking.png' %}" alt="">
+                        </div>
+                    </div>
+                </div>
+            </div>
+        </div>
+    </div>
+    <!-- BOOKING AREA END -->
+
+    <!-- FEATURED FLAT AREA START -->
+    <div class="featured-flat-area pt-115 pb-80">
+        <div class="container">
+            <div class="row">
+                <div class="col-md-12">
+                    <div class="section-title-2 text-center">
+                        <h2>Featured PROPERTY</h2>
+                        <p>Sheltek is the best theme for  elit, sed do eiusmod tempor dolor sit amet, conse ctetur adipiscing elit, sed do eiusmod tempor incididunt ut labore et lorna aliquatd minim veniam, quis nostrud</p>
+                    </div>
+                </div>
+            </div>
+            <div class="featured-flat">
+                <div class="row">
+                {% for home in homes %}
+                    <!-- flat-item -->
+                    <div class="col-md-4 col-sm-6 col-xs-12">
+                        <div class="flat-item">
+                            <div class="flat-item-image">
+                                <span class="for-sale">{{ home.status}}</span>
+                                <a href="{% url 'property_detail' home.slug %}"><img src="{{ home.image.url }}" width="368px" height="250px" alt=""></a>
+                                <div class="flat-link">
+                                    <a href="{% url 'property_detail' home.slug %}">More Details</a>
+                                </div>
+                                <ul class="flat-desc">
+                                    <li>
+                                        <img src="{% static 'shelter/images/icons/4.png' %}" alt="">
+                                        <span>{{ home.area }}</span>
+                                    </li>
+                                    <li>
+                                        <img src="{% static 'shelter/images/icons/5.png' %}" alt="">
+                                        <span>{{ home.bedrooms}}</span>
+                                    </li>
+                                    <li>
+                                        <img src="{% static 'shelter/images/icons/6.png' %}" alt="">
+                                        <span>{{ home.bathrooms}}</span>
+                                    </li>
+                                </ul>
+                            </div>
+                            <div class="flat-item-info">
+                                <div class="flat-title-price">
+                                    <h5><a href="{% url 'property_detail' home.slug %}">{{ home.title }} </a></h5>
+                                    <span class="price">${{ home.price }}</span>
+                                </div>
+                                <p><img src="{% static 'shelter/images/icons/location.png' %}" alt="">{{ home.location}}</p>
+                            </div>
+                        </div>
+                    </div>
+                   
+                
+                {% endfor %} 
+                </div>
+            </div>
+        </div>
+    </div>
+    <!-- FEATURED FLAT AREA END -->
+
+    <!-- FEATURES AREA START -->
+    <div class="features-area fix">
+        <div class="container-fluid">
+            <div class="row">
+                <div class="col-md-7 col-md-offset-5">
+                    <div class="features-info bg-gray">
+                        <div class="section-title mb-30">
+                            <h3>HERE IS</h3>
+                            <h2 class="h1">AWESOME FEATUES</h2>
+                        </div>
+                        <div class="features-desc">
+                            <p><span data-placement="top" data-toggle="tooltip" data-original-title="The name you can trust" class="tooltip-content">Sheltek</span> is the best theme for  elit, sed do eiusmod tempor dolor sit amet, conse ctetur adipiscing elit, sed do smod tempor incididunt ut labore et lorna aliquatd minim veniam, quis nostrud exercitation oris nisi</p>
+                        </div>
+                        <div class="features-include">
+                            <div class="row">
+                                <div class="col-lg-4 col-md-6 col-sm-4">
+                                    <div class="features-include-list">
+                                        <h6><img src="{% static 'shelter/images/icons/7.png' %}" alt="">Fully Furnished</h6>
+                                        <p>Lorem is a dummy text do eiud tempor dolor sit amet dum</p>
+                                    </div>
+                                </div>
+                                <div class="col-lg-4 col-md-6 col-sm-4">
+                                    <div class="features-include-list">
+                                        <h6><img src="{% static 'shelter/images/icons/7.png' %}" alt="">Royal Touch Paint</h6>
+                                        <p>Lorem is a dummy text do eiud tempor dolor sit amet dum</p>
+                                    </div>
+                                </div>
+                                <div class="col-lg-4 col-md-6 col-sm-4">
+                                    <div class="features-include-list">
+                                        <h6><img src="{% static 'shelter/images/icons/7.png' %}" alt="">Latest Interior Design</h6>
+                                        <p>Lorem is a dummy text do eiud tempor dolor sit amet dum</p>
+                                    </div>
+                                </div>
+                                <div class="col-lg-4 col-md-6 col-sm-4">
+                                    <div class="features-include-list">
+                                        <h6><img src="{% static 'shelter/images/icons/7.png' %}" alt="">Non Stop Security</h6>
+                                        <p>Lorem is a dummy text do eiud tempor dolor sit amet dum</p>
+                                    </div>
+                                </div>
+                                <div class="col-lg-4 col-md-6 col-sm-4">
+                                    <div class="features-include-list">
+                                        <h6><img src="{% static 'shelter/images/icons/7.png' %}" alt="">Living Inside a Nature</h6>
+                                        <p>Lorem is a dummy text do eiud tempor dolor sit amet dum</p>
+                                    </div>
+                                </div>
+                                <div class="col-lg-4 col-md-6 col-sm-4">
+                                    <div class="features-include-list">
+                                        <h6><img src="{% static 'shelter/images/icons/7.png' %}" alt="">Luxurious Fittings</h6>
+                                        <p>Lorem is a dummy text do eiud tempor dolor sit amet dum</p>
+                                    </div>
+                                </div>
+                            </div>
+                        </div>
+                    </div>
+                </div>
+            </div>
+        </div>
+    </div>
+    <!-- FEATURES AREA END -->
+
+    <!-- OUR AGENTS AREA START -->
+    <div class="our-agents-area pt-115 pb-55">
+        <div class="container">
+            <div class="row">
+                <div class="col-md-12">
+                    <div class="section-title-2 text-center">
+                        <h2>OUR AGENTS</h2>
+                        <p>Sheltek is the best theme for  elit, sed do eiusmod tempor dolor sit amet, conse ctetur adipiscing elit, sed do eiusmod tempor incididunt ut labore et lorna aliquatd minim veniam, quis nostrud</p>
+                    </div>
+                </div>
+            </div>
+            <div class="our-agents">
+                <div class="row">
+                    <div class="agents-carousel">
+                        <!-- single-agent -->
+                        {% for agent in agents %}
+                            <div class="col-md-12">
+                                <div class="single-agent">
+                                    <div class="agent-image">
+                                        <img src="{{agent.photo.url }}" alt="">
+                                    </div>
+                                    <div class="agent-info">
+                                        <div class="agent-name">
+                                            <h5><a href="#">{{ agent.name }}</a></h5>
+                                            <p>Real Estate Agent</p>
+                                        </div>
+                                    </div>
+                                    <div class="agent-info-hover">
+                                        <div class="agent-name">
+                                            <h5><a href="agent-details.html">{{ agent.name }}</a></h5>
+                                            <p>Real Estate Agent</p>
+                                        </div>
+                                        <ul class="agent-address">
+                                            <li><img src="{% static 'shelter/images/icons/phone-2.png' %}" alt="">{{ agent.phone }} </li>
+                                            <li><img src="{% static 'shelter/images/icons/mail-close.png' %}" alt="">{{ agent.email }}</li>
+                                            <li><i class="fa fa-skype" aria-hidden="true"></i> {{ agent.skype }}</li>
+                                        </ul>
+                                        <ul class="social-media">
+                                            <li><a href="{{ agent.facebook }}"><i class="fa fa-facebook" aria-hidden="true"></i></a></li>
+                                            <li><a href="{{ agent.twitter}}"><i class="fa fa-twitter" aria-hidden="true"></i></a></li>
+                                           
+                                            
+                                        </ul>
+                                    </div>
+                                </div>
+                            </div>
+                        {% endfor %}
+                    </div>
+                </div>
+            </div>
+        </div>
+    </div>
+    <!-- OUR AGENTS AREA END -->
+    <!-- SUBSCRIBE AREA START -->
+    <div class="subscribe-area bg-blue call-to-bg plr-140 ptb-50">
+        <div class="container-fluid">
+            <div class="row">
+                <div class="col-md-3 col-sm-4 col-xs-12">
+                    <div class="section-title text-white">
+                        <h3>SUBSCRIBE</h3>
+                        <h2 class="h1">NEWSLETTER</h2>
+                    </div>
+                </div>
+                <div class="col-md-9 col-sm-8 col-xs-12">
+                    <div class="subscribe">
+                        <form action="">
+                            <input type="text" name="subscribe" placeholder="Enter your email here...">
+                            <button type="submit" value="send">Send</button>
+                        </form>
+                    </div>
+                </div>
+            </div>
+        </div>
+    </div>
+    <!-- SUBSCRIBE AREA END -->
+{% endblock %}

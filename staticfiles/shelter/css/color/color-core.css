@@ -1,0 +1,63 @@
+/*------------------------------------------------------------------------------
+
+    Template:  Sheltek Real Estate HTML5 Template
+    Author: http://devitems.com/
+    Version: 1
+    Design and Developed by: http://devitems.com/
+
+    NOTE: This is color stylesheet of Color Scheme.
+
+    Note: This color style file includes all external color css file.
+
+-------------------------------------------------------------------------------*/
+
+
+/* --------------------------------------------------
+    Template color css file
+-------------------------------------------------- */
+
+/*1*/
+/*@import url('skin-amber.css');*/
+
+/*2*/
+/*@import url('skin-blue-grey.css');*/
+
+/*3*/
+/*@import url('skin-blue.css');*/
+
+/*4*/
+/*@import url('skin-cyan.css');*/
+
+/*5*/
+/*@import url('skin-default.css');*/
+
+/*6*/
+/*@import url('skin-green-dark.css');*/
+
+/*7*/
+/*@import url('skin-green.css');*/
+
+/*8*/
+/*@import url('skin-maroon.css');*/
+
+/*9*/
+/*@import url('skin-orenge.css');*/
+
+/*10*/
+/*@import url('skin-pink.css');*/
+
+/*11*/
+/*@import url('skin-purple.css');*/
+
+/*12*/
+/*@import url('skin-teal.css');*/
+
+/* ===============================
+    Active Color CSS
+================================ */
+
+@import url('skin-default.css');
+
+
+
+

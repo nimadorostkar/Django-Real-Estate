@@ -1,0 +1,321 @@
+{% extends 'shelter/base.html' %}
+{% load static %}
+<title>{% block title %} Shelter | Property Details {% endblock %}</title>
+
+{% block  content %}
+    <!-- BREADCRUMBS AREA START -->
+    <div class="breadcrumbs-area bread-bg-1 bg-opacity-black-70">
+        <div class="container">
+            <div class="row">
+                <div class="col-xs-12">
+                    <div class="breadcrumbs">
+                        <h2 class="breadcrumbs-title">Properties Details</h2>
+                        <ul class="breadcrumbs-list">
+                            <li><a href="{% url 'index' %}">Home</a></li>
+                            <li><a href="{% url 'properties_list' %}">Properties</a></li>
+                            <li>Properties Details</li>
+                        </ul>
+                    </div>
+                </div>
+            </div>
+        </div>
+    </div>
+    <!-- BREADCRUMBS AREA END -->
+
+    <!-- Start page content -->
+    <section id="page-content" class="page-wrapper">
+      
+        <!-- PROPERTIES DETAILS AREA START -->
+        <div class="properties-details-area pt-115 pb-60">
+            <div class="container">
+                <h1>{{ home.title }}</h1><br>
+                <div class="row">
+                    <div class="col-md-8">
+                        <!-- pro-details-image -->
+                        <div class="pro-details-image mb-60">
+                            <div class="pro-details-big-image">
+                                <div class="tab-content">
+                                    <div role="tabpanel" class="tab-pane fade in active" id="pro-1">
+                                        <a href="#" data-lightbox="image-1" data-title="Sheltek Properties - 1">
+                                            <img src="{{ home.image.url }}" alt="">
+                                        </a>
+                                    </div>
+                                    <div role="tabpanel" class="tab-pane fade" id="pro-2">
+                                        <a href="" data-lightbox="image-1" data-title="Sheltek Properties - 2">
+                                            <img src="{{ home.image2.url }}" alt="">
+                                        </a>
+                                    </div>
+                                    <div role="tabpanel" class="tab-pane fade" id="pro-3">
+                                        <a href="" data-lightbox="image-1" data-title="Sheltek Properties - 3">
+                                            <img src="{{ home.image3.url }}" alt="">
+                                        </a>
+                                    </div>
+                                    <div role="tabpanel" class="tab-pane fade" id="pro-4">
+                                        <a href="images/single-property/big/1.jpg" data-lightbox="image-1" data-title="Sheltek Properties - 4">
+                                            <img src="{% static 'images/single-property/big/1.jpg' %}" alt="">
+                                        </a>
+                                    </div>
+                                    <div role="tabpanel" class="tab-pane fade" id="pro-5">
+                                        <a href="images/single-property/big/2.jpg" data-lightbox="image-1" data-title="Sheltek Properties - 5">
+                                            <img src="{% static 'images/single-property/big/2.jpg' %}" alt="">
+                                        </a>
+                                    </div>
+                                </div>
+                            </div>
+                            <div class="pro-details-carousel">
+                                <div class="pro-details-item">
+                                    <a href="#pro-1" data-toggle="tab"><img src="{{ home.image.url }}" alt=""></a>
+                                </div>
+                                <div class="pro-details-item">
+                                    <a href="#pro-2" data-toggle="tab">
+                                        <img src="{{ home.image2.url }}" alt="">                
+                                    </a>
+                                </div>
+                                <div class="pro-details-item">
+                                    <a href="#pro-3" data-toggle="tab">
+                                        <img src="{{ home.image3.url }}" alt="">                
+                                    </a>
+                                </div>
+                                
+                                
+                            </div>                           
+                        </div>
+                        <!-- pro-details-short-info -->
+                        <div class="pro-details-short-info mb-60">
+                            <div class="row">
+                                <div class="col-sm-6 col-xs-12">
+                                    <div class="pro-details-condition">
+                                        <h5>Condition</h5>
+                                        <div class="pro-details-condition-inner bg-gray">
+                                            <ul class="condition-list">
+                                                <li><img src="{% static 'shelter/images/icons/5.png' %}" alt="">Area {{ home.area}}</li>
+                                                <li><img src="{% static 'shelter/images/icons/6.png' %}" alt="">Bedroom {{home.bedrooms}}</li>
+                                                <li><img src="{% static 'shelter/images/icons/7.png' %}" alt="">Bathroom {{ home.bathrooms}}</li>
+                                                <li><img src="{% static 'shelter/images/icons/13.png' %}" alt="">Garage {{ home.garage }}</li>
+                                                <li><img src="{% static 'shelter/images/icons/14.png' %}" alt="">Kitchen {{ home.kitchen}}</li>
+                                                <li>${{ home.price }}</li>
+                                            </ul>
+                                            <p><img src="{% static 'shelter/images/icons/location.png' %}" alt="">{{ home.location }}</p>
+                                        </div>
+                                    </div>
+                                </div>
+                                <!-- <div class="col-sm-6 col-xs-12">
+                                    <div class="pro-details-amenities">
+                                        <h5>Amenities</h5>
+                                        <div class="pro-details-amenities-inner bg-gray">
+                                            <ul class="amenities-list">
+                                                <li>Air Conditioning</li>
+                                                <li>Bedding</li>
+                                                <li>Balcony</li>
+                                                <li>Cable TV</li>
+                                                <li>Internet</li>
+                                                <li>Parking</li>
+                                                <li>Lift</li>
+                                                <li>Pool</li>
+                                                <li>Dishwasher</li>
+                                                <li>Toaster</li>
+                                            </ul>
+                                        </div>
+                                    </div>
+                                </div> -->
+                            </div>
+                        </div>
+                        <!-- pro-details-description -->
+                        <div class="pro-details-description mb-50">
+                            <p>{{ home.description}}</p>
+                            
+                        </div>
+                       
+                        <!-- agent-review -->
+                        <div class="pro-details-agent-review">
+                            <div class="row">
+                                <!-- single-agent -->
+                                <div class="col-md-5 col-sm-5 col-xs-12">
+                                    <div class="pro-details-agent">
+                                        <h5>Contact Agent</h5>
+                                        <div class="single-agent">
+                                            <div class="agent-image">
+                                                <img src="{{ home.agent.photo.url }}" alt="">
+                                            </div>
+                                            <div class="agent-info">
+                                                <div class="agent-name">
+                                                    <h5><a href="#">{{ home.agent}}</a></h5>
+                                                    <p>Real Estate agent</p>
+                                                </div>
+                                            </div>
+                                            <div class="agent-info-hover">
+                                                <div class="agent-name">
+                                                    <h5><a href="#">{{home.agent}}</a></h5>
+                                                    <p>Real Estate agent</p>
+                                                </div>
+                                                <ul class="agent-address">
+                                                    <li><img src="{% static 'shelter/images/icons/phone-2.png' %}" alt="">{{ home.agent.phone}} </li>
+                                                    <li><img src="{% static 'shelter/images/icons/mail-close.png' %}" alt="">{{home.agent.email}} </li>
+                                                    <li><i class="fa fa-skype" aria-hidden="true"></i>    {{ home.agent.skype }}</li>
+                                                </ul>
+                                                <ul class="social-media">
+                                                    <li><a href="{{ home.agent.facebook }}"><i class="fa fa-facebook" aria-hidden="true"></i></a></li>
+                                                    <li><a href="{{ home.agent.twitter }}"><i class="fa fa-twitter" aria-hidden="true"></i></a></li>
+                                                    
+                                                    
+                                                </ul>
+                                            </div>
+                                        </div>
+                                    </div>
+                                </div>
+                                <!-- leave-massage -->
+                                <div class="col-md-7  col-sm-7 col-xs-12">
+                                    <div class="leave-review">
+                                        <h5>Contact Agent</h5>
+                                        <form id="contact-form-2" action="{% url 'agentcontact' %}"  method="POST">
+                                            {% csrf_token %}
+                                            <input type="hidden" name="agentname" value="{{home.agent }}">
+                                            <input type="text" name="name" placeholder="Your name" required>
+                                            <input type="email" name="email" placeholder="Email here" required>
+                                            <textarea placeholder="Your Subject" name="textarea" required></textarea>
+                                            <button type="submit" class="submit-btn-1" value="send">Send</button>
+                                           
+                                        </form>
+                                        <p class="form-messege"></p>
+
+                                    </div>
+                                </div>
+                            </div>
+                        </div>
+                    </div>
+                    <div class="col-md-4">
+                        <!-- widget-search-property -->
+                        <aside class="widget widget-search-property">
+                            <h5>Search For Property</h5>
+                            <form action="{% url 'search' %}" method="GET">
+                                <div class="row">
+
+                                    <div class="col-md-6 col-sm-3 col-xs-12">
+                                        <div class="find-home-item custom-select">
+                                            <input type="text" name="keyword" placeholder="Enter Keyword">
+                                        </div>
+                                    </div>
+
+                                    <div class="col-md-6 col-sm-3 col-xs-12">
+                                        <div class="find-home-item custom-select">                  
+                                            <select class="selectpicker" title="Location" data-hide-disabled="true" data-live-search="true" name="location">
+                                               {% for location_key,location_value in search_locations.items %}
+                                                <option>{{ location_value }}</option>
+                                               {% endfor %}
+                                               
+                                            </select>
+                                        </div>
+                                    </div>
+
+                                    <div class="col-md-6 col-sm-3 col-xs-12">
+                                        <div class="find-home-item  custom-select">                  
+                                            <select class="selectpicker" title="No. of Bedrooms" data-hide-disabled="true" name="bedrooms">
+                                                <optgroup >
+                                                    <option>1</option>
+                                                    <option>2</option>
+                                                    <option>3</option>
+                                                    <option>4</option>
+                                                    <option>5</option>
+                                                    <option>6</option>
+                                                </optgroup>
+                                            </select>
+                                        </div> 
+                                    </div>
+
+                                    <div class="col-md-6 col-sm-3 col-xs-12">
+                                        <div class="find-home-item custom-select">                  
+                                            <select class="selectpicker" title="No. of Bathrooms" data-hide-disabled="true" name="bathrooms">
+                                                <optgroup >
+                                                    <option>1</option>
+                                                    <option>2</option>
+                                                    <option>3</option>
+                                                    <option>4</option>
+                                                    <option>5</option>
+                                                </optgroup>
+                                            </select>
+                                        </div>
+                                    </div>
+
+                                    <div class="col-md-6 col-sm-3 col-xs-12">
+                                        <div class="find-home-item custom-select">                  
+                                            <select class="selectpicker" title="Max Price" data-hide-disabled="true" name="price">
+                                                <optgroup >
+                                                    <option>$1000</option>
+                                                    <option>$2000</option>
+                                                    <option>$3000</option>
+                                                    <option>$4000</option>
+                                                    <option>$6000</option>
+                                                    <option>$7000</option>
+                                                    <option>$8000</option>
+                                                    <option>$9000</option>
+                                                    <option>$10000</option>
+                                                </optgroup>
+                                            </select>
+                                        </div>
+                                    </div>
+
+                                    <div class="col-md-10 col-sm-6 col-xs-12">
+                                        <div class="row">
+                                            
+                                            <div class="col-md-12 col-sm-5 col-xs-12">
+                                                <div class="find-home-item">
+                                                    <button class="button-1 btn-block btn-hover-1" >SEARCH</button>
+                                                </div>
+                                            </div>
+                                        </div>
+                                    </div>
+                                </div>
+                            </form>
+                        </aside>
+                        <!-- widget-featured-property -->
+                        <aside class="widget widget-featured-property">
+                            <h5>Featured Property</h5>
+                            <div class="row">
+                                <!-- flat-item -->
+                            {% for sidehome in sidebar_homes %}
+                                <div class="col-md-12 col-sm-6 col-xs-12">
+                                    <div class="flat-item">
+                                        <div class="flat-item-image">
+                                            <span class="for-sale">{{ sidehome.status }}</span>
+                                            <a href="#"><img src="{{ sidehome.image.url }}" width="330px" height="210px" alt=""></a>
+                                            <div class="flat-link">
+                                                <a href="{% url 'property_detail' sidehome.slug %}">More Details</a>
+                                            </div>
+                                            <ul class="flat-desc">
+                                                <li>
+                                                    <img src="{% static 'shelter/images/icons/4.png' %}" alt="">
+                                                    <span>{{ sidehome.area}}</span>
+                                                </li>
+                                                <li>
+                                                    <img src="{% static 'shelter/images/icons/5.png' %}" alt="">
+                                                    <span>{{ sidehome.bedrooms}}</span>
+                                                </li>
+                                                <li>
+                                                    <img src="{% static 'shelter/images/icons/6.png' %}" alt="">
+                                                    <span>{{ sidehome.bathrooms }}</span>
+                                                </li>
+                                            </ul>
+                                        </div>
+                                        <div class="flat-item-info">
+                                            <div class="flat-title-price">
+                                                <h5><a href="#">{{sidehome.title}} </a></h5>
+                                                <span class="price">${{ sidehome.price }}</span>
+                                            </div>
+                                            <p><img src="{% static 'shelter/images/icons/location.png' %}" alt="">{{ sidehome.location}}</p>
+                                        </div>
+                                    </div>
+                                </div>
+                            {% endfor %}
+                            </div>
+                        </aside>
+                        
+                    </div>
+                </div>
+            </div>
+        </div>
+        <!-- PROPERTIES DETAILS AREA END -->
+        
+        
+    </section>
+    <!-- End page content -->
+{% endblock %}

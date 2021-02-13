@@ -1,0 +1,131 @@
+/*
+
+Template:  Sheltek Real Estate HTML5 Template
+Author: http://devitems.com/
+Version: 1
+Design and Developed by: http://devitems.com/
+
+NOTE: This is color stylesheet of Color Scheme.
+
+*/
+
+
+/* ************************
+        General
+************************ */
+
+
+/** selection **/
+
+*::-moz-selection {
+    background: #50C1F0;
+    color: #fff;
+    text-shadow: none;
+}
+
+::-moz-selection {
+    background: #50C1F0;
+    color: #fff;
+    text-shadow: none;
+}
+
+::selection {
+    background: #50C1F0;
+    color: #fff;
+    text-shadow: none;
+}
+
+
+
+/*=====================================*/
+
+
+a:focus,
+a:hover {
+  color: #FFC0CB;
+  text-decoration: none;
+}
+
+.main-menu > li:hover > a,
+.drop-menu > li:hover > a,
+.single-mega-item > li:hover > a,
+.transparent-header .main-menu > li:hover > a,
+.copyright a,
+.slider-1-title-1 span,
+.price,
+.counter-item i,
+.counter-item-2 i,
+.tweets-item > p > a,
+.tweet-brief a,
+.text-theme,
+.single-agent:hover .agent-info-hover .agent-name h5,
+.error-content h2 {
+    color: #FFC0CB;
+}
+
+.drop-menu,
+.mega-menu-area,
+.find-home-box {
+  border-bottom: 4px solid #FFC0CB;
+}
+
+.nivo-directionNav a:hover,
+.nivo-controlNav a.active,
+.slider-button:hover,
+.mark, mark,
+#scrollUp:hover,
+.bg-theme,
+.call-to-bg::before,
+.ui-slider .ui-slider-range,
+.ui-state-default, .ui-widget-content .ui-state-default, .ui-widget-header .ui-state-default,
+.flat-link > a:hover,
+.button-1,
+.pagination-list > li a:hover,
+.submit-btn-1,
+.widget-search button:hover,
+.blog-details-title-time::before,
+.blog-quote::before,
+.line-bottom::before,
+.go-home:hover,
+.dots-right-btm .slick-dots li.slick-active button,
+.subscribe button,
+.footer-contact button:hover,
+.blog-item:hover .post-title-time::before,
+.for-sale {
+  background: #FFC0CB none repeat scroll 0 0;
+}
+
+.slider-button:hover,
+.flat-link > a:hover,
+.button-1,
+.brand-item:hover,
+.go-home:hover {
+  border: 1px solid #FFC0CB;
+}
+
+input[type="text"]:focus,
+input[type="email"]:focus,
+input[type="password"]:focus,
+textarea:focus,
+.footer-contact textarea:focus {
+  border: 1px solid #FFC0CB;
+}
+
+.single-agent:hover {
+  border-color:#FFC0CB;
+}
+
+.blog-item:hover .blog-info,
+.blog-item:hover .blog-info a {
+  border-color: #FFC0CB;
+  color: #FFC0CB;
+}
+
+
+
+
+
+
+
+
+

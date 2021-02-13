@@ -1,0 +1,190 @@
+/* -----------------------------------
+  Template Name: Sheltek - Real Estate HTML Template 
+
+  NOTE: This is Slider style file. All Slider related style included in this file.
+
+--------------------------------------*/
+
+/* .slider-area > img {
+  height: 100vh;
+  width: 100%;
+} */
+
+/* ------------------------------
+  Slider-1
+------------------------------ */
+.slider-overlay::before {
+  background: rgba(0, 0, 0, 0.75) none repeat scroll 0 0;
+  content: "";
+  height: 100%;
+  left: 0;
+  position: absolute;
+  top: 0;
+  width: 100%;
+  z-index: 7;
+}
+.slider-content {
+  left: 0;
+  margin: auto;
+  position: absolute;
+  right: 0;
+  top: 50%;
+  transform: translateY(-44%);
+  width: calc(100% - 40%);
+}
+
+.slider-1-title-1 {
+  font-size: 23px;
+  font-weight: 600;
+  line-height: 1;
+  margin-bottom: 15px;
+  text-transform: uppercase;
+}
+.slider-1-title-1 span {
+  color: #95c41f;
+}
+.slider-1-title-2 {
+  font-size: 48px;
+  font-weight: 700;
+  line-height: 1;
+  margin-bottom: 15px;
+  text-transform: uppercase;
+}
+.slider-1-desc {
+  font-size: 16px;
+  margin-bottom: 0px;
+}
+.slider-1-title-1,
+.slider-1-title-2,
+.slider-1-desc {
+  color: #fff;
+}
+
+/*nivo-directionNav*/
+.nivo-directionNav a {
+  border: 1px solid #707070;
+  color: #6b6b6b;
+  cursor: pointer;
+  font-family: 'montserrat';
+  font-size: 13px;
+  line-height: 15px;
+  padding: 15px 0;
+  position: absolute;
+  text-align: center;
+  text-transform: uppercase;
+  top: 45%;
+  width: 40px;
+  z-index: 9;
+}
+.nivo-prevNav {
+  left: 8%;
+}
+.nivo-nextNav {
+  right: 8%;
+}
+.nivo-directionNav a:hover {
+  background: #95c41f none repeat scroll 0 0;
+  border: 1px solid transparent;
+  color: #fff;
+}
+/*nivo-controlNav*/
+.nivo-controlNav {
+  bottom: 10px;
+  left: 0;
+  margin: auto;
+  padding: 0;
+  position: absolute;
+  right: 0;
+  text-align: center;
+  z-index: 9;
+}
+.nivo-controlNav a {
+  background: #1f223e none repeat scroll 0 0;
+  border-radius: 50%;
+  cursor: pointer;
+  display: inline-block;
+  font-size: 0;
+  height: 15px;
+  margin: 0 5px;
+  width: 15px;
+}
+.nivo-controlNav a.active {
+  background: #95c41f none repeat scroll 0 0;
+  font-weight: bold;
+}
+.nivo-controlNav {
+  display: none;
+}
+/*slider-button*/
+.slider-button {
+  background: transparent;
+  border: 1px solid #fff;
+  color: #fff;
+  display: inline-block;
+  text-transform: uppercase;
+  padding: 5px 18px;
+  font-size: 14px;  
+}
+.slider-button:focus {
+  color: #fff;
+}
+.slider-button:hover {
+  background: #95c41f;
+  border: 1px solid #95c41f;
+  color: #fff;
+}
+/* ------------------------------
+  Slider-2
+------------------------------ */
+.slider-2 {
+  overflow: hidden;
+  padding: 130px 0 75px;
+}
+.find-home-box {
+  background: rgba(31, 34, 62, 0.7) none repeat scroll 0 0;
+  border-bottom: 4px solid #95c41f;
+  margin-left: 20%;
+  padding: 45px 30px 20px;
+  width: 440px;
+}
+.find-home-box .section-title {
+  margin-bottom: 42px;
+}
+.find-home-box .find-homes {
+  margin: auto;
+  width: calc(100% - 0px);
+}
+.find-home-box .find-home-item {
+  margin-bottom: 30px;
+}
+/*slider-3*/
+.slider-3 {
+  position: relative;
+  padding-top: 260px;
+  padding-bottom: 200px;
+}
+.slider-content-3 {
+  width: calc(100% - 20%);
+  margin: auto;
+}
+/*Dotted-overlay*/
+.dotted-overlay {
+  position: relative;
+}
+.dotted-overlay::after {
+  background: rgba(0, 0, 0, 0) url("../../images/icons/grid.png") repeat scroll 0 0;
+  content: "";
+  height: 100%;
+  left: 0;
+  position: absolute;
+  top: 0;
+  width: 100%;
+  z-index: -1;
+}
+
+
+
+
+
+
+
