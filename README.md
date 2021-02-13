@@ -9,16 +9,15 @@ A simple, reponsive website real estate listings built with `python` `django` `b
 1. **Clone the project**
 
 ```sh
-git clone https://github.com/nimadorostkar/Simple-Django-RealEstate.git
+git clone https://github.com/nimadorostkar/Django-RealEstate.git
 ```
 
-2.  **Make sure you are in *Simple-Django-RealEstate* folder**
+2.  **Make sure you are in *Django-RealEstate* folder**
 
-   1. Install all dependencies
 
-      ```sh
-      pip install -r requirements.txt
-      ```
+```sh
+pip install -r requirements.txt
+```
 
 3. **Run Migrations**
 
@@ -34,7 +33,6 @@ python manage.py runserver
 ```
 
 
-
 ### Screenshots
 
 
@@ -44,12 +42,3 @@ python manage.py runserver
 
 
 ![Admin](https://github.com/nimadorostkar/Simple-Django-RealEstate/blob/master/screenshots/s5adm.JPG)
-
-
-
-
-
-##### References
-
-1. https://www.traversymedia.com/
-2. https://www.djangoproject.com/
