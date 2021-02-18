@@ -37,7 +37,7 @@
 <body>
 
     <div class="wrapper">
-	
+
         <!-- HEADER AREA START -->
         <header class="header-area header-wrapper">
             <div class="header-top-bar bg-white">
@@ -72,7 +72,7 @@
                                 </div>
                             </div>
                         </div>
-                        
+
                     </div>
                 </div>
             </div>
@@ -89,9 +89,9 @@
                                 <nav id="primary-menu">
                                     <ul class="main-menu text-center">
                                         <li><a href="{% url 'index' %}">Home</a>
-                                            
+
                                         </li>
-                                        
+
                                         <li><a href="{% url 'services' %}">Service</a>
                                             <!-- <ul class="drop-menu">
                                                 <li><a href="service.html">Service</a></li>
@@ -99,14 +99,14 @@
                                             </ul> -->
                                         </li>
                                         <li><a href="{% url 'properties_list' %}">Properties</a>
-                                           
+
                                         </li>
                                         <li><a href="{% url 'agents_list' %}">Agent</a>
-                                           
+
                                         </li>
-                                       
+
                                         <li><a href="#">Blog</a>
-                                           
+
                                         </li>
                                         <li><a href="{% url 'contact' %}">Contact</a></li>
                                     </ul>
@@ -128,17 +128,17 @@
                             <nav id="dropdown">
                                 <ul>
                                     <li><a href="{% url 'index' %}">Home</a>
-                                        
+
                                     </li>
                                     <li><a href="{% url 'services' %}">Service</a>
-                                       
+
                                     </li>
                                     <li><a href="{% url 'properties_list' %}">Properties</a>
-                                       
+
                                     </li>
-                                   
+
                                     <li><a href="#">Blog</a>
-                                        
+
                                     </li>
                                     <li><a href="{% url 'contact' %}">Contact</a></li>
                                 </ul>
@@ -150,10 +150,10 @@
         </div>
         <!-- MOBILE MENU AREA END -->
     </div>
-    {% block content %} 
+    {% block content %}
     {% endblock %}
 
-    
+
     <footer id="footer" class="footer-area bg-2 bg-opacity-black-90">
         <div class="footer-top pt-110 pb-80">
             <div class="container">
@@ -178,7 +178,7 @@
                                     </div>
                                     <div class="address-info">
                                         <span>Telephone : (+92306) 2281  637</span>
-                                        
+
                                     </div>
                                 </li>
                                 <li>
@@ -236,13 +236,13 @@
                                 <p>Lorem ipsum dolor sit amet, consectetur acinglit sed do eiusmod tempor</p>
                                 <form  id="contact-form-2" action="{% url 'quickcontact' %}" method="post">
                                     {% csrf_token %}
-                                   
+
                                     {{quickcontactform}}
                                     <button type="submit" value="send">Send</button>
                                 </form>
-                               
+
                                 <p class="form-messege"></p>
-                                
+
                             </div>
                         </div>
                     </div>
@@ -254,7 +254,7 @@
                 <div class="row">
                     <div class="col-xs-12">
                         <div class="copyright text-center">
-                            <p>Copyright &copy; 2020 <a href="https://www.twitter.com/sk7698277"><b>Sajjad Khan</b></a>. All rights reserved.</p>
+                            <p>Copyright &copy; 2020 <a href="https://www.twitter.com/nimadrskr"><b>nima dorostkar</b></a>. All rights reserved.</p>
                         </div>
                     </div>
                 </div>
@@ -268,7 +268,7 @@
     <script src="{% static 'shelter/js/vendor/jquery-3.1.1.min.js' %}"></script>
     <!-- Bootstrap framework js -->
     <script src="{% static 'shelter/js/bootstrap.min.js' %}"></script>
-    <!-- Nivo slider js -->    
+    <!-- Nivo slider js -->
     <script src="{% static 'shelter/lib/js/jquery.nivo.slider.js' %}"></script>
     <!-- ajax-mail js -->
     <script src="{% static 'shelter/js/ajax-mail.js' %}"></script>
