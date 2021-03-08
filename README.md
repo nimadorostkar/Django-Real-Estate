@@ -1,7 +1,7 @@
 # Real Estate Django Web App
 
-A simple, real estate reponsive website listings built with `django`.
-
+A simple, real estate reponsive website listings built with `django`. <br>
+A full featured real estate website. that let user find properties in the preferred cities or neighborhood and also let realtor list their properties
 
 ## How to run this project
 
