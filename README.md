@@ -57,9 +57,9 @@ python manage.py runserver
 ### Screenshots
 
 
-![Home](https://github.com/nimadorostkar/Django-RealEstate/blob/master/screenshots/2.png)
+![Home](https://github.com/nimadorostkar/Django-RealEstate/blob/master/screenshots/1.png)
 
-![Items](https://github.com/nimadorostkar/Django-RealEstate/blob/master/screenshots/1.png)
+![Items](https://github.com/nimadorostkar/Django-RealEstate/blob/master/screenshots/2.png)
 
 ![Admin](https://github.com/nimadorostkar/Django-RealEstate/blob/master/screenshots/3.png)
 
