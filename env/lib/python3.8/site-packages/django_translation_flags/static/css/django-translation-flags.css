@@ -1,0 +1,184 @@
+.icon-background {
+  background-size: contain;
+  background-position: 50%;
+  background-repeat: no-repeat;
+}
+.flag-icon {
+  background-size: contain;
+  background-position: 50%;
+  background-repeat: no-repeat;
+  position: relative;
+  display: inline-block;
+  width: 1.33333333em;
+  line-height: 1em;
+}
+.flag-icon:before {
+  content: '\00a0';
+}
+.flag-icon.flag-icon-squared {
+  width: 1em;
+}
+.flag-icon-af {
+  background-image: url(../icons/rect/af.svg);
+}
+.flag-icon-af.flag-icon-squared {
+  background-image: url(../icons/square/af.svg);
+}
+.flag-icon-ar {
+  background-image: url(../icons/rect/ar.svg);
+}
+.flag-icon-ar.flag-icon-squared {
+  background-image: url(../icons/square/ar.svg);
+}
+.flag-icon-az {
+  background-image: url(../icons/rect/az.svg);
+}
+.flag-icon-az.flag-icon-squared {
+  background-image: url(../icons/square/az.svg);
+}
+.flag-icon-de {
+  background-image: url(../icons/rect/de.svg);
+}
+.flag-icon-de.flag-icon-squared {
+  background-image: url(../icons/square/de.svg);
+}
+.flag-icon-en {
+  background-image: url(../icons/rect/en.svg);
+}
+.flag-icon-en.flag-icon-squared {
+  background-image: url(../icons/square/en.svg);
+}
+.flag-icon-en-au {
+  background-image: url(../icons/rect/en-au.svg);
+}
+.flag-icon-en-au.flag-icon-squared {
+  background-image: url(../icons/square/en-au.svg);
+}
+.flag-icon-es {
+  background-image: url(../icons/rect/es.svg);
+}
+.flag-icon-es.flag-icon-squared {
+  background-image: url(../icons/square/es.svg);
+}
+.flag-icon-es-ar {
+  background-image: url(../icons/rect/es-ar.svg);
+}
+.flag-icon-es-ar.flag-icon-squared {
+  background-image: url(../icons/square/es-ar.svg);
+}
+.flag-icon-es-mx {
+  background-image: url(../icons/rect/es-mx.svg);
+}
+.flag-icon-es-mx.flag-icon-squared {
+  background-image: url(../icons/square/es-mx.svg);
+}
+.flag-icon-fr {
+  background-image: url(../icons/rect/fr.svg);
+}
+.flag-icon-fr.flag-icon-squared {
+  background-image: url(../icons/square/fr.svg);
+}
+.flag-icon-hi {
+  background-image: url(../icons/rect/hi.svg);
+}
+.flag-icon-hi.flag-icon-squared {
+  background-image: url(../icons/square/hi.svg);
+}
+.flag-icon-hu {
+  background-image: url(../icons/rect/hu.svg);
+}
+.flag-icon-hu.flag-icon-squared {
+  background-image: url(../icons/square/hu.svg);
+}
+.flag-icon-id {
+  background-image: url(../icons/rect/id.svg);
+}
+.flag-icon-id.flag-icon-squared {
+  background-image: url(../icons/square/id.svg);
+}
+.flag-icon-it {
+  background-image: url(../icons/rect/it.svg);
+}
+.flag-icon-it.flag-icon-squared {
+  background-image: url(../icons/square/it.svg);
+}
+.flag-icon-ja {
+  background-image: url(../icons/rect/ja.svg);
+}
+.flag-icon-ja.flag-icon-squared {
+  background-image: url(../icons/square/ja.svg);
+}
+.flag-icon-ko {
+  background-image: url(../icons/rect/ko.svg);
+}
+.flag-icon-ko.flag-icon-squared {
+  background-image: url(../icons/square/ko.svg);
+}
+.flag-icon-nl {
+  background-image: url(../icons/rect/nl.svg);
+}
+.flag-icon-nl.flag-icon-squared {
+  background-image: url(../icons/square/nl.svg);
+}
+.flag-icon-pl {
+  background-image: url(../icons/rect/pl.svg);
+}
+.flag-icon-pl.flag-icon-squared {
+  background-image: url(../icons/square/pl.svg);
+}
+.flag-icon-pt {
+  background-image: url(../icons/rect/pt.svg);
+}
+.flag-icon-pt.flag-icon-squared {
+  background-image: url(../icons/square/pt.svg);
+}
+.flag-icon-pt-br {
+  background-image: url(../icons/rect/pt-br.svg);
+}
+.flag-icon-pt-br.flag-icon-squared {
+  background-image: url(../icons/square/pt-br.svg);
+}
+.flag-icon-ru {
+  background-image: url(../icons/rect/ru.svg);
+}
+.flag-icon-ru.flag-icon-squared {
+  background-image: url(../icons/square/ru.svg);
+}
+.flag-icon-sv {
+  background-image: url(../icons/rect/sv.svg);
+}
+.flag-icon-sv.flag-icon-squared {
+  background-image: url(../icons/square/sv.svg);
+}
+.flag-icon-tr {
+  background-image: url(../icons/rect/tr.svg);
+}
+.flag-icon-tr.flag-icon-squared {
+  background-image: url(../icons/square/tr.svg);
+}
+.flag-icon-uk {
+  background-image: url(../icons/rect/uk.svg);
+}
+.flag-icon-uk.flag-icon-squared {
+  background-image: url(../icons/square/uk.svg);
+}
+.flag-icon-zh-cn {
+  background-image: url(../icons/rect/zh-cn.svg);
+}
+.flag-icon-zh-cn.flag-icon-squared {
+  background-image: url(../icons/square/zh-cn.svg);
+}
+.flag-icon-zh-hans {
+  background-image: url(../icons/rect/zh-hans.svg);
+}
+.flag-icon-zh-hans.flag-icon-squared {
+  background-image: url(../icons/square/zh-hans.svg);
+}
+.flag-icon-zh-hant {
+  background-image: url(../icons/rect/zh-hant.svg);
+}
+.flag-icon-zh-hant.flag-icon-squared {
+  background-image: url(../icons/square/zh-hant.svg);
+}
+
+/*# sourceMappingURL=data:application/json;charset=utf8;base64,eyJ2ZXJzaW9uIjozLCJzb3VyY2VzIjpbImJhc2UubGVzcyIsImxpc3QtaWNvbnMubGVzcyJdLCJuYW1lcyI6W10sIm1hcHBpbmdzIjoiQUFBQTtFQUNFLHdCQUFBO0VBQ0Esd0JBQUE7RUFDQSw0QkFBQTs7QUFHRjtFQUxFLHdCQUFBO0VBQ0Esd0JBQUE7RUFDQSw0QkFBQTtFQUtBLGtCQUFBO0VBQ0EscUJBQUE7RUFDQSxtQkFBQTtFQUNBLGdCQUFBOztBQUNBLFVBQUM7RUFDQyxTQUFTLE9BQVQ7O0FBRUYsVUFBQztFQUNDLFVBQUE7O0FDaEJIO0VEc0JHLDJDQUFBOztBQUNBLGFBQUM7RUFDQyw2Q0FBQTs7QUN4Qkw7RURzQkcsMkNBQUE7O0FBQ0EsYUFBQztFQUNDLDZDQUFBOztBQ3hCTDtFRHNCRywyQ0FBQTs7QUFDQSxhQUFDO0VBQ0MsNkNBQUE7O0FDeEJMO0VEc0JHLDJDQUFBOztBQUNBLGFBQUM7RUFDQyw2Q0FBQTs7QUN4Qkw7RURzQkcsMkNBQUE7O0FBQ0EsYUFBQztFQUNDLDZDQUFBOztBQ3hCTDtFRHNCRyw4Q0FBQTs7QUFDQSxnQkFBQztFQUNDLGdEQUFBOztBQ3hCTDtFRHNCRywyQ0FBQTs7QUFDQSxhQUFDO0VBQ0MsNkNBQUE7O0FDeEJMO0VEc0JHLDhDQUFBOztBQUNBLGdCQUFDO0VBQ0MsZ0RBQUE7O0FDeEJMO0VEc0JHLDhDQUFBOztBQUNBLGdCQUFDO0VBQ0MsZ0RBQUE7O0FDeEJMO0VEc0JHLDJDQUFBOztBQUNBLGFBQUM7RUFDQyw2Q0FBQTs7QUN4Qkw7RURzQkcsMkNBQUE7O0FBQ0EsYUFBQztFQUNDLDZDQUFBOztBQ3hCTDtFRHNCRywyQ0FBQTs7QUFDQSxhQUFDO0VBQ0MsNkNBQUE7O0FDeEJMO0VEc0JHLDJDQUFBOztBQUNBLGFBQUM7RUFDQyw2Q0FBQTs7QUN4Qkw7RURzQkcsMkNBQUE7O0FBQ0EsYUFBQztFQUNDLDZDQUFBOztBQ3hCTDtFRHNCRywyQ0FBQTs7QUFDQSxhQUFDO0VBQ0MsNkNBQUE7O0FDeEJMO0VEc0JHLDJDQUFBOztBQUNBLGFBQUM7RUFDQyw2Q0FBQTs7QUN4Qkw7RURzQkcsMkNBQUE7O0FBQ0EsYUFBQztFQUNDLDZDQUFBOztBQ3hCTDtFRHNCRywyQ0FBQTs7QUFDQSxhQUFDO0VBQ0MsNkNBQUE7O0FDeEJMO0VEc0JHLDJDQUFBOztBQUNBLGFBQUM7RUFDQyw2Q0FBQTs7QUN4Qkw7RURzQkcsOENBQUE7O0FBQ0EsZ0JBQUM7RUFDQyxnREFBQTs7QUN4Qkw7RURzQkcsMkNBQUE7O0FBQ0EsYUFBQztFQUNDLDZDQUFBOztBQ3hCTDtFRHNCRywyQ0FBQTs7QUFDQSxhQUFDO0VBQ0MsNkNBQUE7O0FDeEJMO0VEc0JHLDJDQUFBOztBQUNBLGFBQUM7RUFDQyw2Q0FBQTs7QUN4Qkw7RURzQkcsMkNBQUE7O0FBQ0EsYUFBQztFQUNDLDZDQUFBOztBQ3hCTDtFRHNCRyw4Q0FBQTs7QUFDQSxnQkFBQztFQUNDLGdEQUFBOztBQ3hCTDtFRHNCRyxnREFBQTs7QUFDQSxrQkFBQztFQUNDLGtEQUFBOztBQ3hCTDtFRHNCRyxnREFBQTs7QUFDQSxrQkFBQztFQUNDLGtEQUFBIiwic291cmNlc0NvbnRlbnQiOlsiLmljb24tYmFja2dyb3VuZCB7XG4gIGJhY2tncm91bmQtc2l6ZTogY29udGFpbjtcbiAgYmFja2dyb3VuZC1wb3NpdGlvbjogNTAlO1xuICBiYWNrZ3JvdW5kLXJlcGVhdDogbm8tcmVwZWF0O1xufVxuXG4uZmxhZy1pY29uIHtcbiAgLmljb24tYmFja2dyb3VuZDtcbiAgcG9zaXRpb246IHJlbGF0aXZlO1xuICBkaXNwbGF5OiBpbmxpbmUtYmxvY2s7XG4gIHdpZHRoOiB1bml0KCg0IC8gMyksIGVtKTtcbiAgbGluZS1oZWlnaHQ6IDFlbTtcbiAgJjpiZWZvcmUge1xuICAgIGNvbnRlbnQ6ICdcXDAwYTAnO1xuICB9XG4gICYuZmxhZy1pY29uLXNxdWFyZWQge1xuICAgIHdpZHRoOiAxZW07XG4gIH1cbn1cblxuLmZsYWctaWNvbihAY29kZSkge1xuICAuZmxhZy1pY29uLUB7Y29kZX0ge1xuICAgIGJhY2tncm91bmQtaW1hZ2U6IH4ndXJsKEB7Y3NzLXBhdGh9QHtyZWN0LXBhdGh9L0B7Y29kZX0uc3ZnKSc7XG4gICAgJi5mbGFnLWljb24tc3F1YXJlZCB7XG4gICAgICBiYWNrZ3JvdW5kLWltYWdlOiB+J3VybChAe2Nzcy1wYXRofUB7c3F1YXJlLXBhdGh9L0B7Y29kZX0uc3ZnKSc7XG4gICAgfVxuICB9XG59XG4iLCIuZmxhZy1pY29uKGFmKTtcbi5mbGFnLWljb24oYXIpO1xuLmZsYWctaWNvbihheik7XG4uZmxhZy1pY29uKGRlKTtcbi5mbGFnLWljb24oZW4pO1xuLmZsYWctaWNvbihlbi1hdSk7XG4uZmxhZy1pY29uKGVzKTtcbi5mbGFnLWljb24oZXMtYXIpO1xuLmZsYWctaWNvbihlcy1teCk7XG4uZmxhZy1pY29uKGZyKTtcbi5mbGFnLWljb24oaGkpO1xuLmZsYWctaWNvbihodSk7XG4uZmxhZy1pY29uKGlkKTtcbi5mbGFnLWljb24oaXQpO1xuLmZsYWctaWNvbihqYSk7XG4uZmxhZy1pY29uKGtvKTtcbi5mbGFnLWljb24obmwpO1xuLmZsYWctaWNvbihwbCk7XG4uZmxhZy1pY29uKHB0KTtcbi5mbGFnLWljb24ocHQtYnIpO1xuLmZsYWctaWNvbihydSk7XG4uZmxhZy1pY29uKHN2KTtcbi5mbGFnLWljb24odHIpO1xuLmZsYWctaWNvbih1ayk7XG4uZmxhZy1pY29uKHpoLWNuKTtcbi5mbGFnLWljb24oemgtaGFucyk7XG4uZmxhZy1pY29uKHpoLWhhbnQpO1xuIl0sImZpbGUiOiJkamFuZ28tdHJhbnNsYXRpb24tZmxhZ3MuY3NzIn0= */

@@ -1,0 +1,91 @@
+Metadata-Version: 2.1
+Name: pep517
+Version: 0.8.2
+Summary: Wrappers to build Python packages using PEP 517 hooks
+Home-page: https://github.com/pypa/pep517
+License: UNKNOWN
+Author: Thomas Kluyver
+Author-email: thomas@kluyver.me.uk
+Description-Content-Type: text/x-rst
+Classifier: License :: OSI Approved :: MIT License
+Classifier: Programming Language :: Python :: 2.7
+Classifier: Programming Language :: Python :: 3
+Requires-Dist: toml
+Requires-Dist: importlib_metadata;python_version<'3.8'
+Requires-Dist: zipp;python_version<'3.8'
+
+`PEP 517 <https://www.python.org/dev/peps/pep-0517/>`_ specifies a standard
+API for systems which build Python packages.
+
+This package contains wrappers around the hooks specified by PEP 517. It
+provides:
+
+- A mechanism to call the hooks in a subprocess, so they are isolated from
+  the current process.
+- Fallbacks for the optional hooks, so that frontends can call the hooks without
+  checking which are defined.
+- Higher-level functions which install the build dependencies into a
+  temporary environment and build a wheel/sdist using them.
+
+Run the tests with ``pytest`` or `tox <https://pypi.org/project/tox>`_.
+
+High level usage, with build requirements handled:
+
+.. code-block:: python
+
+    import os
+    from pep517.envbuild import build_wheel, build_sdist
+
+    src = 'path/to/source'  # Folder containing 'pyproject.toml'
+    destination = 'also/a/folder'
+    whl_filename = build_wheel(src, destination)
+    assert os.path.isfile(os.path.join(destination, whl_filename))
+
+    targz_filename = build_sdist(src, destination)
+    assert os.path.isfile(os.path.join(destination, targz_filename))
+
+Lower level usage—you are responsible for ensuring build requirements are
+available:
+
+.. code-block:: python
+
+    import os
+    import toml
+    from pep517.wrappers import Pep517HookCaller
+
+    src = 'path/to/source'  # Folder containing 'pyproject.toml'
+    with open(os.path.join(src, 'pyproject.toml')) as f:
+        build_sys = toml.load(f)['build-system']
+
+    print(build_sys['requires'])  # List of static requirements
+
+    hooks = Pep517HookCaller(
+        src, 
+        build_backend=build_sys['build_backend'],
+        backend_path=build_sys.get('backend-path'),
+    )
+
+    config_options = {}   # Optional parameters for backend
+    # List of dynamic requirements:
+    print(hooks.get_requires_for_build_wheel(config_options))
+
+    destination = 'also/a/folder'
+    whl_filename = hooks.build_wheel(destination, config_options)
+    assert os.path.isfile(os.path.join(destination, whl_filename))
+
+To test the build backend for a project, run in a system shell:
+
+.. code-block:: shell
+
+    python3 -m pep517.check path/to/source  # source dir containing pyproject.toml
+
+To build a backend into source and/or binary distributions, run in a shell:
+
+.. code-block:: shell
+
+    python -m pep517.build path/to/source  # source dir containing pyproject.toml
+
+This 'build' module should be considered experimental while the PyPA `decides
+on the best place for this functionality
+<https://github.com/pypa/packaging-problems/issues/219>`_.
+

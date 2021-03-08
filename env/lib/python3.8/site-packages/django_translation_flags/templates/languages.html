@@ -1,0 +1,37 @@
+{% load static %}
+{% load i18n %}
+{% get_current_language as LANGUAGE_CODE %}
+{% get_available_languages as LANGUAGES %}
+{% get_language_info for LANGUAGE_CODE as lang %}
+{% get_language_info_list for LANGUAGES as languages %}
+
+<link rel="stylesheet" type="text/css" href="{% static 'css/django-translation-flags.min.css' %}">
+
+{% for language in languages %}
+<li {% if classes.li_class != '' %} class="{{ classes.li_class }}" {% endif %}>
+    <a href="#{{ language.code }}"
+       onclick="set_language('{{ language.code }}')"
+       {% if classes.a_class != '' %} class="{{ classes.a_class }}" {% endif %}
+       title="{{ language.name_local }}">
+        <span class="flag-icon flag-icon-{{ language.code }} {{ icon_class }}"></span>
+    </a>
+</li>
+{% endfor %}
+
+<form action="{% url 'set_language' %}" method="post" id="setlang">
+    {% csrf_token %}
+    <input name="next" type="hidden" value="{{ redirect_to }}">
+    <input type="hidden" name="language" id="language">
+</form>
+
+<script type="text/javascript">
+        if (window.location.hash){
+            var hash = window.location.hash;
+            document.getElementById('language').value = hash.replace('#', '');
+            document.getElementById('setlang').submit()
+        }
+    function set_language(language) {
+        $('input[name="language"]').val(language);
+        $('form#setlang').submit();
+    }
+</script>

@@ -1,0 +1,2 @@
+django_translation_flags
+tests
