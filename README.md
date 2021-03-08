@@ -3,7 +3,6 @@
 A simple, real estate reponsive website listings built with `django`.
 
 
-
 ## How to run this project
 
 
