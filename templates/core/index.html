@@ -1,0 +1,99 @@
+{% extends 'core/base.html' %}
+{% load static %}
+
+{% load humanize %}
+{% block extrastyle %}
+
+<meta name="description" content="Real estate manager. 
+Offers the best real estate objects and takes care of every aspect for you.
+Services offered: renting, selling, buying, consultation and way more."/>
+{% endblock %}
+
+{% block title %} | Welcome {% endblock %}
+
+{% block content %}
+<!-- Showcase -->
+<section id="showcase">
+  <div class="container text-center">
+    <div class="home-search p-5">
+      <div class="overlay round-corners p-5">
+
+
+        <div class="row col-12 pl-0 ml-0">
+
+          <div class="col-12 col-lg-8 p-0 text-left">
+            <h1 class="display-4 font-weight-bold mb-3">
+              {{ _("Property Searching Just Got So Easy") }}
+            </h1>
+            <p class="lead mb-5">{{ _("We offer extraordinary properties across all price classes.") }}</p>
+          </div>
+
+          <div class="col-4"></div>
+        </div>
+
+
+        {% include 'core/partials/_search.html' %}
+      </div>
+    </div>
+  </div>
+</section>
+<br>
+<!-- Alerts -->
+{% include 'core/partials/_alerts.html' %}
+
+<!-- Listings -->
+<section id="listings" class="my-5">
+  <div class="container">
+    <h2 class="mb-5">
+      {{ _("Latest Listings") }}
+    </h2>
+    <div class="row">
+      {% if listings %}
+      {% for listing in listings %}
+      {% include 'listings/_partials/_listing-box.html' %}
+      {% endfor %}
+      {% else %}
+      <div class="col-md-12">
+        <p>{{ _("No Listings Available") }}</p>
+      </div>
+      {% endif %}
+
+    </div>
+  </div>
+</section>
+
+<section id="services" class="py-5 bg-secondary text-white">
+  <div class="container">
+    <div class="row text-center  bg-blur p-5">
+
+      <div class="col-12 col-md-6 col-xl-4">
+        <i class="fas fa-comment fa-4x mr-4"></i>
+        <hr>
+        <h3>{{ _("Buying and Renting") }}</h3>
+        <p>
+          {{ _("We take car of your property. We can support you through the whole selling or renting process.") }}
+          {{ _("We make sure that everything is being taken care of.") }}
+        </p>
+      </div>
+      <div class="col-12 col-md-6 col-xl-4">
+        <i class="fas fa-home fa-4x mr-4"></i>
+        <hr>
+        <h3>{{ _("Propery Management") }}</h3>
+        <p>
+          {{ _("Property management is the overseeing of residential, commercial and/or industrial real estate, including apartments, detached houses, condominium units, and shopping centers") }}
+        </p>
+      </div>
+      <div class="col-12 col-md-6 col-xl-4">
+        <i class="fas fa-suitcase fa-4x mr-4"></i>
+        <hr>
+        <h3>{{ _("Renting & Selling") }}</h3>
+        <p>{{ _("Thinking about purchasing an investment property? Real estate has produced many of the world's wealthiest people, so there are plenty of reasons to think that it is a sound investment.") }}</p>
+      </div>
+    </div>
+  </div>
+</section>
+
+
+
+
+{% endblock %}

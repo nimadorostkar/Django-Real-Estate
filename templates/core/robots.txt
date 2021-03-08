@@ -1,0 +1,10 @@
+{% load static %}
+# Group 1
+User-agent: Googlebot
+Disallow: /snippets/
+
+# Group 2
+User-agent: *
+Disallow: /snippets/
+
+Sitemap: {{ domain }}/sitemap.xml

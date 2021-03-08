@@ -1,0 +1,15 @@
+{% extends 'admin/base_site.html' %}
+{% load static %}
+
+{% block content %}
+
+
+
+{% for msg in contact.chatmessage_set.all %}
+{{ msg }}
+{% endfor %}
+
+
+
+
+{% endblock %}

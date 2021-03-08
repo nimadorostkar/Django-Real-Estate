@@ -1,0 +1,95 @@
+{% extends 'core/base.html' %}
+{% load static %}
+
+{% load humanize %}
+
+
+{% block content %}
+
+
+<section id="showcase-inner" class="py-5 showcase-text">
+  <div class="container bg-blur">
+    <div class="row">
+      <div class="col-md-12 my-4">
+        <h1 class="display-4 my-3 showcase-text">
+          {{ title }}
+        </h1>
+        {% include 'core/partials/_search.html' %}
+
+      </div>
+    </div>
+  </div>
+</section>
+
+
+
+<!-- Breadcrumb -->
+<section id="bc" class="mt-3">
+  <div class="container">
+    <nav aria-label="breadcrumb">
+      <ol class="breadcrumb">
+        <li class="breadcrumb-item">
+          <a href="{% url 'index' %}">
+            <i class="fas fa-home"></i> {{ _("Home") }}</a>
+        </li>
+        <li class="breadcrumb-item active">{{ _("Browse Listings") }} </li>
+      </ol>
+    </nav>
+  </div>
+</section>
+
+<!-- Listings -->
+<section id="listings" class="py-4">
+  <div class="container">
+    <div class="row">
+      {% if listings %}
+      {% for listing in listings %}
+      {% include 'listings/_partials/_listing-box.html' %}
+      {% endfor %}
+      {% else %}
+      <div class="col-md-12">
+        <p>{{ _("No Listings Available") }}</p>
+      </div>
+      {% endif %}
+    </div>
+
+    <div class="row">
+      <div class="col-md-12">
+        {% if listings.has_other_core %}
+        <ul class="pagination">
+          {% if listings.has_previous %}
+          <li class="page-item">
+            <a href="?page={{listings.previous_page_number}}" class="page-link">&laquo;</a>
+          </li>
+          {% else %}
+          <li class="page-item disabled">
+            <a class="page-link">&laquo;</a>
+          </li>
+          {% endif %}
+          {% for i in listings.paginator.page_range %}
+          {% if listings.number == i %}
+          <li class="page-item active">
+            <a class="page-link">{{i}}</a>
+          </li>
+          {% else %}
+          <li class="page-item">
+            <a href="?page={{i}}" class="page-link">{{i}}</a>
+          </li>
+          {% endif %}
+          {% endfor %}
+          {% if listings.has_next %}
+          <li class="page-item">
+            <a href="?page={{listings.next_page_number}}" class="page-link">&raquo;</a>
+          </li>
+          {% else %}
+          <li class="page-item disabled">
+            <a class="page-link">&raquo;</a>
+          </li>
+          {% endif %}
+        </ul>
+        {% endif %}
+      </div>
+    </div>
+  </div>
+</section>
+{% endblock %}

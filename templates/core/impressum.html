@@ -1,0 +1,38 @@
+{% extends 'core/base.html' %}
+{% load static %}
+
+{% load static %}
+
+
+{% block content %}
+
+
+{% include 'core/partials/_showcase_section.html' %}
+
+
+<!-- Breadcrumb -->
+<section id="bc" class="mt-3">
+    <div class="container">
+        <nav aria-label="breadcrumb">
+            <ol class="breadcrumb">
+                <li class="breadcrumb-item">
+                    <a href="{% url 'index' %}">
+                        <i class="fas fa-home"></i> Home</a>
+                </li>
+                <li class="breadcrumb-item active"> {{ _("Impressum") }}</li>
+            </ol>
+        </nav>
+    </div>
+</section>
+
+<section id="about" class="py-4">
+    <div class="container">
+        <div class="pb-3">
+            <h4>Impressum | Angaben gemäß § 5 TMG</h4>
+        </div>
+
+
+    </div>
+</section>
+
+{% endblock %}

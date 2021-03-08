@@ -1,0 +1,18 @@
+{% extends 'admin/base.html' %}
+{% load static %}
+
+{% block branding %}
+<h1 id="head">
+  <a href="{% url 'admin:index' %}" style="color: white;" class="mr-5">
+    <img src="{% static 'img/logo/logo.svg' %}" alt="Real-Estate" height="50" width="80" class="brand_img mr-5">
+    ADMIN AREA
+  </a>
+  {% if user.is_authenticated %}
+  <span>   |   </span>
+  <small><a href="{% url 'admin-contact' %}">Contacts</a></small>
+  {% endif %}
+</h1>
+{% endblock %}
+{% block extrastyle %}
+<link rel="stylesheet" href="{% static 'css/admin.css' %}">
+{% endblock %}

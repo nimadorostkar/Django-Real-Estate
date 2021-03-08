@@ -1,0 +1,136 @@
+<div class="search">
+    <form action="{% url 'search' %}">
+        {% csrf_token %}
+        <!-- Form Row 1 -->
+        <div class="form-row">
+
+
+            <div class="input-group col-12 col-xs-6 col-md-3 mb-3 text-left">
+                <label class="sr-only">
+                    {{ _("Keywords") }}
+                </label>
+                <div class="input-group-append">
+                    <span class="input-group-text icon-size text-center">
+                        <i class="fas fa-search"></i>
+                    </span>
+                </div>
+                <input type="text" name="keywords" class="form-control"
+                    placeholder='{{ _("Keyword (Pool, Garage, etc)") }}'>
+            </div>
+
+            <div class="input-group col-12 col-xs-6 col-md-3 mb-3 text-left">
+                <label class="sr-only">
+                    {{ _("City") }}
+                </label>
+                <div class="input-group-append">
+                    <span class="input-group-text icon-size text-center">
+                        <i class="fas fa-city"></i>
+                    </span>
+                </div>
+                <input type="text" name="city" class="form-control" placeholder='{{ _("City") }}'
+                    value="{{ values.city }}">
+            </div>
+
+
+            <div class="input-group col-12 col-xs-6 col-md-3 mb-3 text-left">
+                <label class="sr-only">
+                    {{ _("State") }}
+                </label>
+                <div class="input-group-append">
+                    <span class="input-group-text icon-size text-center">
+                        <i class="fas fa-map-marker"></i>
+                    </span>
+                </div>
+                <select name="state" class="form-control">
+                    <option selected="true">{{ _("States (All)") }}</option>
+                    {% for state in states %}
+                    <option value="{{ state.id }}">{{ state.name }}</option>
+                    {% endfor %}
+                </select>
+            </div>
+
+
+
+            <div class="input-group col-12 col-xs-6 col-md-3 mb-3 text-left">
+                <label class="sr-only">
+                    {{ _("Type") }}
+                </label>
+                <div class="input-group-append">
+                    <span class="input-group-text icon-size text-center">
+                        <i class="fas fa-home"></i>
+                    </span>
+                </div>
+                <select name="listing_type" class="form-control">
+                    <option selected="true">{{ _("Type (All)") }}</option>
+                    {% for type in list_types %}
+                    <option value="{{ type.id }}">{{ type.name }}</option>
+                    {% endfor %}
+                </select>
+            </div>
+
+
+
+            <div class="input-group col-6 col-md-3 mb-3 text-left">
+                <label class="sr-only">
+                    {{ _("Min Bedrooms") }}:
+                </label>
+                <div class="input-group-append">
+                    <span class="input-group-text icon-size text-center">
+                        <i class="fas fa-bed"></i>
+                    </span>
+                </div>
+                <input type="number" name="bedrooms" class="form-control" placeholder="Min bedrooms"
+                    value="{{ values.bedrooms }}">
+            </div>
+
+
+
+            <div class="input-group col-6 col-md-3 mb-3 text-left">
+                <label class="sr-only">
+                    {{ _("Min Bathrooms") }}:
+                </label>
+                <div class="input-group-append">
+                    <span class="input-group-text icon-size text-center">
+                        <i class="fas fa-bath"></i>
+                    </span>
+                </div>
+                <input type="number" name="bathrooms" class="form-control" placeholder="Min bathrooms"
+                    value="{{ values.bathrooms }}">
+            </div>
+
+
+
+            <div class="input-group col-6 col-md-3 mb-3 text-left">
+                <label class="sr-only">
+                    {{ _("Min m²") }}
+                </label>
+                <div class="input-group-append">
+                    <span class="input-group-text icon-size text-center">
+                        <i class="fas fa-th-large"></i>
+                    </span>
+                </div>
+                <input name="m²" class="form-control" placeholder='{{ _("Min m²") }}' value="{{ values.sqft }}">
+            </div>
+
+
+
+            <div class="input-group col-6 col-md-3 mb-3 text-left">
+                <label class="sr-only">
+                    {{ _("Max price") }}
+                </label>
+                <div class="input-group-append">
+                    <span class="input-group-text icon-size text-center">
+                        <i class="fas fa-euro-sign"></i>
+                    </span>
+                </div>
+                <input name="price" class="form-control" placeholder='{{ _("Max price") }}' value="{{ values.price }}">
+            </div>
+
+
+
+        </div>
+
+        <button class="btn btn-secondary btn-block m-1" type="submit">{{ _("Search") }}
+        </button>
+    </form>
+</div>

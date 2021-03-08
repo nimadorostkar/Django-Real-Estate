@@ -1,0 +1,87 @@
+{% extends 'core/base.html' %}
+{% load static %}
+{% load i18n %}
+{% load filters %}
+{% load humanize %}
+
+
+{% block content %}
+<section id="showcase-inner" class="py-5 text-white">
+  <div class="container">
+    <div class="row text-center">
+      <div class="col-md-12">
+        <h1 class="display-4">{{ _("Documents for") }} {{ listing.title }}</h1>
+        <p class="lead">
+          <i class="fas fa-map-marker"></i> {{ listing.address.city }}, {{ listing.address.state }},
+          {{ listing.address.zipcode }}</p>
+      </div>
+    </div>
+  </div>
+</section>
+
+<!-- Breadcrumb -->
+<section id="bc" class="mt-3">
+  <div class="container">
+    <nav>
+      <ol class="breadcrumb">
+        <li class="breadcrumb-item">
+          <a href="{% url 'index' %}">{{ _("Home") }}</a>
+        </li>
+        <li class="breadcrumb-item">
+          <a href="{% url 'dashboard' %}">{{ _("Dashboard") }}</a>
+        </li>
+
+        <li class="breadcrumb-item active">{{ _("Documents") }}</li>
+
+        <li class="breadcrumb-item">
+          <a href="{% url 'listing' listing.id %}">{{ listing.title }}</a></li>
+      </ol>
+    </nav>
+  </div>
+</section>
+
+<!-- Alerts -->
+{% include 'core/partials/_alerts.html' %}
+
+<!-- Listing -->
+<section id="listing" class="py-4">
+  <div class="container">
+    <a href="{% url 'listing' listing.id %}" class="btn btn-light mb-4 ml-0">{{ _("Back To Listing") }}</a>
+
+
+    <div class="row">
+      <div class="row col-md-9 mb-5">
+        <!-- Home File Liset -->
+
+        {% if object.listingfile_set.all.count > 0 %}
+        {% for document in object.listingfile_set.all %}
+        {% if document.for_customer %}
+        <div class="col-12">
+
+          <h4>{{ document.name }}</h4>
+          <p>{{ document.short_description }}</p>
+          <!--embed src="{% static 'img/pdf.png' %}" width="40px" height="40px" /-->
+          <a href="{{ document.file.url }}" target="_blank" class="btn btn-danger snice-red">
+            Open File
+          </a>
+          <a href="{{ document.file.url }}" target="_blank" class="btn btn-danger" download>
+            Download
+          </a>
+          <hr>
+        </div>
+        {% endif %}
+        {% endfor %}
+        {% else %}
+        <div class="col-12 col-sm-6">
+          <h5 class="p-2">{{ _("Nothing to display") }}.</h5>
+        </div>
+
+        {% endif %}
+      </div>
+      {% include 'contacts/_partials/_realtor-contact-box.html' %}
+    </div>
+  </div>
+</section>
+
+
+{% endblock %}

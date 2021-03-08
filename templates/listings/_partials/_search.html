@@ -1,0 +1,53 @@
+{% extends 'core/base.html' %}
+{% load static %}
+
+{% load humanize %}
+
+{% block title %} | Search Results {% endblock %}
+
+{% block content %}
+<section id="showcase-inner" class="showcase-search text-white py-5">
+    <div class="container">
+      <div class="row text-center">
+        <div class="col-md-12">
+          {% include 'core/partials/_search.html' %}
+        </div>
+      </div>
+    </div>
+  </section>
+
+  <!-- Breadcrumb -->
+  <section id="bc" class="mt-3">
+    <div class="container">
+      <nav aria-label="breadcrumb">
+        <ol class="breadcrumb">
+          <li class="breadcrumb-item">
+            <a href="{% url 'index' %}">
+              <i class="fas fa-home"></i>{{ _("Home") }} </a>
+          </li>
+          <li class="breadcrumb-item">
+            <a href="{% url 'listings' %}">{{ _("Browse Listings") }}</a>
+          </li>
+          <li class="breadcrumb-item active">{{ _("Search Results") }} </li>
+        </ol>
+      </nav>
+    </div>
+  </section>
+
+  <!-- Listings -->
+  <section id="listings" class="py-4">
+    <div class="container">
+      <div class="row">
+        {% if listings %}
+        {% for listing in listings %}
+          {% include 'listings/_partials/_listing-box.html' %}
+        {% endfor %}
+      {% else %}
+        <div class="col-md-12">
+          <p>{{ _("No Listings Available") }}</p>
+        </div>
+      {% endif %}
+      </div>
+    </div>
+  </section>
+  {% endblock %}

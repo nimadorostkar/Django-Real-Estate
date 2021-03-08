@@ -1,0 +1,29 @@
+<form action="{% url 'user-contact' %}" method="POST">
+    {% csrf_token %}
+    <input type="hidden" name="user_id" value="{{ user.id }}">
+    <input type="hidden" name="realtor_email" value="{{ listing.realtor.email }}">
+    <input type="hidden" name="listing_id" value="{{ listing.id }}">
+    <input type="hidden" name="email" value="{{ email }}">
+
+
+    <div class="form-group">
+      <label for="property_name" class="col-form-label">Property:</label>
+      <input type="text" name="listing" class="form-control" value="{{ listing.title }}" readonly=True>
+    </div>
+
+  
+
+    <div class="form-group">
+      <label for="phone" class="col-form-label">Phone:</label>
+      <input type="text" name="phone" class="form-control" {% if user.phone %}
+        value="{{ user.phone }}" {% else %} {% endif %} required>
+    </div>
+
+    <div class="form-group">
+      <label for="message" class="col-form-label">Message:</label>
+      <textarea name="message" rows="6" class="form-control"></textarea>
+    </div>
+    
+    <hr>
+    <input type="submit" value="Send" class="btn btn-block btn-secondary">
+  </form>

@@ -1,0 +1,32 @@
+{% load static %}
+<!DOCTYPE html>
+<html lang="en">
+
+  {% include 'core/partials/_header.html' %}
+
+
+<body>
+  <header>
+  <!-- Top Bar -->
+  {% include 'core/partials/_topbar.html' %}
+  <!-- NavBar -->
+  {% include 'core/partials/_navbar.html' %}
+  </header>
+
+  <main>
+    <!-- Main Content -->
+    {% block content %} {% endblock %}
+  </main>
+
+  
+  <!-- Footer -->
+  {% include 'core/partials/_footer.html' %}
+  
+
+  <script src="{% static 'js/jquery-3.3.1.min.js' %} "></script>
+  <script src="{% static 'js/bootstrap.bundle.min.js' %} "></script>
+  <script src="{% static 'js/lightbox.min.js' %} "></script>
+  <script src="{% static 'js/main.js' %} "></script>
+</body>
+
+</html>

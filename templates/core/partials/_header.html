@@ -1,0 +1,34 @@
+{% load static %}
+
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    
+    <meta http-equiv="X-UA-Compatible" content="ie=edge">
+
+    <meta name="description" content="{{ page_description }}"/>
+    <meta name="author" content="Alicia Schonefeld."/>
+    <title>{{ domain_name }} | {{ page_title }}</title>
+    <link rel="canonical" href="{{ domain }}{{ request.path }}" />
+
+
+    <link rel="icon" href ="{% static 'img/logo/favicon.ico' %}" type="image/x-icon" />
+    <link rel="shortcut icon" href="{% static 'img/logo/favicon.ico' %}" type="image/x-icon" />
+    <link rel="apple-touch-icon" sizes="120x120" href="{% static 'img/logo/apple-touch-icon-120x120-precomposed.png' %}" /> 
+    <link rel="apple-touch-icon" sizes="152x152" href="{% static 'img/logo/apple-touch-icon-152x152-precomposed.png' %}" />
+
+
+    
+    <!-- Font Awesome -->
+    <link rel="stylesheet" href="{% static 'css/all.css' %}">
+    <!-- Bootstrap -->
+    <link rel="stylesheet" href="{% static 'css/bootstrap.css' %}">
+    <!-- Custom -->
+    <link rel="stylesheet" href="{% static 'css/style.css' %}">
+    <!-- Lightbox -->
+    <link rel="stylesheet" href="{% static 'css/lightbox.min.css' %}">
+
+    <!-- django translation flags -->
+    <link rel="stylesheet" type="text/css" href="{% static 'css/django-translation-flags.min.css' %}">
+
+</head>

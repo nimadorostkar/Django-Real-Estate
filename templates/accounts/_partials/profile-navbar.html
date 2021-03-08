@@ -1,0 +1,11 @@
+<nav class="nav nav-pills nav-justified">
+    <a class="nav-item nav-link {% if profile %}
+                active {% endif %}" href="{% url 'profile' user.id %}">{{ _("Profile") }}
+    </a>
+    <a class="nav-item nav-link  {% if address %}
+                active {% endif %}" href="{% url 'user-address' %}">{{ _("Address") }}
+    </a>
+    <a class="nav-item nav-link  {% if docs %}
+                 active {% endif %}" href="{% url 'user-docs' %}">{{ _("Documents") }}
+    </a>
+</nav>

@@ -1,0 +1,15 @@
+<!-- Post to CHAT :: url if user already made an inquiry -->
+<form action="{% url 'chat' %}" method="POST">
+  {% csrf_token %}
+
+  <input type="hidden" name="user_id" value="{{ user.id }}">
+  <input type="hidden" name="contact_id" value="{{ contact }}">
+  
+  <div class="form-group">
+    <label for="message" class="col-form-label">{{ _("Message") }}:</label>
+    <textarea name="message" rows="4" class="form-control" placeholder='{{ _("Please enter message here...") }}' required></textarea>
+  </div>
+
+  <input type="submit" value='{{ _("Send message") }}' class="btn btn-block btn-secondary mb-2">
+    <a class="btn btn-primary btn-block" href="{% url 'chat-history' contact %}">{{ _("View history") }}</a>
+</form>

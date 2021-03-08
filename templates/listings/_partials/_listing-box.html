@@ -1,0 +1,48 @@
+{% load static %}
+{% load humanize %}
+
+<div class="col-md-6 col-lg-4 mb-4">
+
+
+  <div class="card listing-preview">
+
+    <a href="{% url 'listing' listing.id %}" class="stretched-link">
+      <img class="card-img-top listing-img" src="{{ listing.image.url }}" alt="">
+
+
+
+      <div class="card-img-overlay">
+        <h2>
+          <span class="badge badge-success">${{ listing.price | intcomma }}</span>
+
+        </h2>
+      </div>
+      <div class="card-body">
+        <div class="listing-heading text-center max-box">
+          <h4 class="text-primary">{{ listing.title }}</h4>
+        </div>
+    </a>
+    <hr>
+    <div>
+      <p>
+        <i class="fas fa-map-marker text-secondary"></i>
+        {{ listing.address.city }}, {{ listing.address.zipcode }} - {{ listing.address.state.country.shortcut }}
+      </p>
+    </div>
+    <div class="row py-2">
+      <div class="col-6">
+        {{ _("m²") }}: {{ listing.sqft }}</div>
+      <div class="col-6">
+        {{ _("Garage") }}: {{ listing.garage }}</div>
+    </div>
+    <div class="row py-2">
+      <div class="col-6">
+        {{ _("Bedrooms") }}: {{ listing.bedrooms }}</div>
+      <div class="col-6">
+        {{ _("Bathrooms") }}: {{ listing.bathrooms }}</div>
+    </div>
+
+    <a href="{% url 'listing' listing.id %}" class="btn btn-secondary btn-block">{{ _("More Info") }}</a>
+  </div>
+</div>
+</div>
