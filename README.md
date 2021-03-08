@@ -42,6 +42,8 @@ pip install -r requirements.txt
 ```sh
 python manage.py makemigrations
 python manage.py migrate
+python manage.py migrate --run-syncdb
+
 ```
 
 6. **Run Server**
@@ -50,7 +52,15 @@ python manage.py migrate
 python manage.py runserver
 ```
 
+7. **And Creating an admin user (superuser)**
+
+```sh
+python manage.py createsuperuser
+```
+
+
 <hr>
+
 
 
 ### Screenshots
