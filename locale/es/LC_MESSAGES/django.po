@@ -1,0 +1,735 @@
+# SOME DESCRIPTIVE TITLE.
+# Copyright (C) YEAR THE PACKAGE'S COPYRIGHT HOLDER
+# This file is distributed under the same license as the PACKAGE package.
+# FIRST AUTHOR <EMAIL@ADDRESS>, YEAR.
+#
+#, fuzzy
+msgid ""
+msgstr ""
+"Project-Id-Version: PACKAGE VERSION\n"
+"Report-Msgid-Bugs-To: \n"
+"POT-Creation-Date: 2020-12-03 18:05+0100\n"
+"PO-Revision-Date: YEAR-MO-DA HO:MI+ZONE\n"
+"Last-Translator: FULL NAME <EMAIL@ADDRESS>\n"
+"Language-Team: LANGUAGE <LL@li.org>\n"
+"Language: \n"
+"MIME-Version: 1.0\n"
+"Content-Type: text/plain; charset=UTF-8\n"
+"Content-Transfer-Encoding: 8bit\n"
+"Plural-Forms: nplurals=2; plural=(n != 1);\n"
+
+#: accounts/forms.py:21 accounts/models.py:44
+#: accounts/templates/accounts/auth/register.html:22
+msgid "Firstname"
+msgstr ""
+
+#: accounts/forms.py:26 accounts/models.py:46
+msgid "Lastname"
+msgstr ""
+
+#: accounts/forms.py:31 accounts/models.py:53
+#: accounts/templates/accounts/auth/login.html:22
+#: accounts/templates/accounts/auth/register.html:30 contacts/models.py:32
+msgid "Email"
+msgstr ""
+
+#: accounts/forms.py:36 accounts/models.py:49 accounts/models.py:79
+#: contacts/models.py:13
+msgid "Phone"
+msgstr ""
+
+#: accounts/models.py:20
+msgid "The Email must be set"
+msgstr ""
+
+#: accounts/models.py:36
+msgid "Superuser must have is_staff=True."
+msgstr ""
+
+#: accounts/models.py:38
+msgid "Superuser must have is_superuser=True."
+msgstr ""
+
+#: accounts/models.py:52
+#: accounts/templates/accounts/_partials/profile-navbar.html:6
+#: accounts/templates/accounts/address.html:28
+#: accounts/templates/accounts/address.html:44 listings/models.py:52
+#: listings/models.py:95
+msgid "Address"
+msgstr ""
+
+#: accounts/models.py:68
+msgid "Groups"
+msgstr ""
+
+#: accounts/models.py:76
+msgid "Photo"
+msgstr ""
+
+#: accounts/models.py:78 listings/models.py:54
+#: listings/templates/listings/listing.html:97
+msgid "Description"
+msgstr ""
+
+#: accounts/models.py:83
+msgid "Hire date"
+msgstr ""
+
+#: accounts/models.py:89 core/templates/core/about.html:131
+#: listings/models.py:48
+msgid "Realtor"
+msgstr ""
+
+#: accounts/models.py:90
+msgid "Realtors"
+msgstr ""
+
+#: accounts/templates/accounts/_partials/profile-navbar.html:3
+#: accounts/templates/accounts/address.html:27
+#: accounts/templates/accounts/documents.html:28
+#: accounts/templates/accounts/profile.html:29
+#: core/templates/core/partials/_navbar.html:79
+#: core/templates/snippeys/profile.html:29
+msgid "Profile"
+msgstr ""
+
+#: accounts/templates/accounts/_partials/profile-navbar.html:9
+#: accounts/templates/accounts/dashboard.html:51
+#: accounts/templates/accounts/dashboard.html:67
+#: accounts/templates/accounts/documents.html:29
+#: documents/templates/documents/documents.html:35
+msgid "Documents"
+msgstr ""
+
+#: accounts/templates/accounts/address.html:11
+msgid "Manage Account Address"
+msgstr ""
+
+#: accounts/templates/accounts/address.html:12
+#: accounts/templates/accounts/dashboard.html:13
+#: accounts/templates/accounts/documents.html:13
+#: accounts/templates/accounts/profile.html:14
+#: core/templates/snippeys/profile.html:14
+msgid "Manage your Real-Estate account"
+msgstr ""
+
+#: accounts/templates/accounts/address.html:25
+#: accounts/templates/accounts/dashboard.html:26
+#: accounts/templates/accounts/documents.html:26
+#: accounts/templates/accounts/profile.html:27
+#: contacts/templates/contacts/messages_history.html:27
+#: core/templates/core/about.html:27
+#: core/templates/core/partials/_navbar.html:20
+#: core/templates/snippeys/profile.html:27
+#: documents/templates/documents/documents.html:29
+#: listings/templates/listings/listing.html:31
+#: listings/templates/listings/listings.html:27
+#: listings/templates/_partials/_search.html:26
+msgid "Home"
+msgstr ""
+
+#: accounts/templates/accounts/auth/login.html:14
+#: core/templates/core/partials/_navbar.html:114
+msgid "Login"
+msgstr ""
+
+#: accounts/templates/accounts/auth/login.html:27
+#: accounts/templates/accounts/auth/register.html:34
+msgid "Password"
+msgstr ""
+
+#: accounts/templates/accounts/auth/login.html:31
+msgid "Forgot password?"
+msgstr ""
+
+#: accounts/templates/accounts/auth/register.html:14
+#: core/templates/core/partials/_navbar.html:102
+msgid "Register"
+msgstr ""
+
+#: accounts/templates/accounts/auth/register.html:26
+msgid " Lastname"
+msgstr ""
+
+#: accounts/templates/accounts/auth/register.html:38
+msgid "Confirm Password"
+msgstr ""
+
+#: accounts/templates/accounts/dashboard.html:12
+#: accounts/templates/accounts/dashboard.html:28
+#: contacts/templates/contacts/messages_history.html:32
+#: core/templates/core/partials/_navbar.html:68
+#: documents/templates/documents/documents.html:32
+msgid "Dashboard"
+msgstr ""
+
+#: accounts/templates/accounts/dashboard.html:41
+msgid "Welcome"
+msgstr ""
+
+#: accounts/templates/accounts/dashboard.html:43
+msgid "Here are the property listings that you have inquired about"
+msgstr ""
+
+#: accounts/templates/accounts/dashboard.html:48
+msgid "Property"
+msgstr ""
+
+#: accounts/templates/accounts/dashboard.html:49
+msgid "Date"
+msgstr ""
+
+#: accounts/templates/accounts/dashboard.html:52
+msgid "Chat"
+msgstr ""
+
+#: accounts/templates/accounts/dashboard.html:62
+msgid "View Listing"
+msgstr ""
+
+#: accounts/templates/accounts/dashboard.html:72
+#: contacts/templates/contacts/_partials/_user_contact_form.html:14
+msgid "View history"
+msgstr ""
+
+#: accounts/templates/accounts/dashboard.html:81
+msgid "You have not made any inquiries"
+msgstr ""
+
+#: accounts/templates/accounts/documents.html:12
+#: accounts/templates/accounts/profile.html:13
+#: core/templates/snippeys/profile.html:13
+msgid "Manage Account"
+msgstr ""
+
+#: accounts/templates/accounts/profile.html:44
+#: core/templates/snippeys/profile.html:44
+msgid "Profile Information"
+msgstr ""
+
+#: accounts/templates/accounts/profile.html:45
+#: core/templates/snippeys/profile.html:45
+msgid "Last login"
+msgstr ""
+
+#: accounts/views.py:30
+msgid "That email is being used"
+msgstr ""
+
+#: accounts/views.py:43
+msgid "You are now registered and can log in"
+msgstr ""
+
+#: accounts/views.py:46
+msgid "Passwords do not match"
+msgstr ""
+
+#: accounts/views.py:60
+msgid "You are now logged in"
+msgstr ""
+
+#: accounts/views.py:63
+msgid "Invalid credentials"
+msgstr ""
+
+#: accounts/views.py:72
+msgid "You are now logged out"
+msgstr ""
+
+#: accounts/views.py:97
+msgid "Profile updated successfully!"
+msgstr ""
+
+#: contacts/models.py:10 documents/models.py:9 documents/models.py:28
+#: listings/models.py:140 listings/models.py:165
+msgid "Listing"
+msgstr ""
+
+#: contacts/models.py:12 contacts/models.py:39
+msgid "User"
+msgstr ""
+
+#: contacts/models.py:14 contacts/templates/contacts/_partials/_user_contact_form.html:9
+msgid "Message"
+msgstr ""
+
+#: contacts/models.py:16
+msgid "Contact date"
+msgstr ""
+
+#: contacts/models.py:18
+msgid "Docs access"
+msgstr ""
+
+#: contacts/models.py:28
+msgid "Client"
+msgstr ""
+
+#: contacts/models.py:37
+msgid "Contact listing"
+msgstr ""
+
+#: contacts/models.py:42
+msgid "Date and iime"
+msgstr ""
+
+#: contacts/templates/contacts/messages_history.html:12
+msgid "Message history"
+msgstr ""
+
+#: contacts/templates/contacts/messages_history.html:35
+#: contacts/templates/contacts/messages_history.html:82
+msgid "History"
+msgstr ""
+
+#: contacts/templates/contacts/messages_history.html:54
+msgid "Send new message"
+msgstr ""
+
+#: contacts/templates/contacts/messages_history.html:62
+msgid "Enter message here please..."
+msgstr ""
+
+#: contacts/templates/contacts/messages_history.html:71
+#: core/templates/core/partials/btn_save_back.html:3
+msgid "Go back"
+msgstr ""
+
+#: contacts/templates/contacts/messages_history.html:105
+#: documents/templates/documents/documents.html:77
+msgid "Nothing to display"
+msgstr ""
+
+#: contacts/templates/contacts/_partials/_realtor-contact-box.html:8
+#: core/templates/snippeys/inquiry copy.html:6
+msgid "Property Realtor"
+msgstr ""
+
+#: contacts/templates/contacts/_partials/_realtor-contact-box.html:20
+#: contacts/templates/contacts/_partials/_realtor-contact-box.html:28
+msgid "Get in touch"
+msgstr ""
+
+#: contacts/templates/contacts/_partials/_user_contact_form.html:10
+#: contacts/templates/contacts/_partials/_user_inquiry_form.html:17
+msgid "Please enter message here..."
+msgstr ""
+
+#: contacts/templates/contacts/_partials/_user_contact_form.html:13
+msgid "Send message"
+msgstr ""
+
+#: contacts/templates/contacts/_partials/_user_inquiry_form.html:20
+msgid "Make an Inquiry"
+msgstr ""
+
+#: contacts/views.py:27 contacts/views.py:70
+msgid "You have already made an inquiry for this listing"
+msgstr ""
+
+#: contacts/views.py:48 contacts/views.py:91
+msgid "Your request has been submitted, a realtor will get back to you soon"
+msgstr ""
+
+#: contacts/views.py:109
+msgid ""
+"Your request has been submitted, a realtor will '                         "
+"'get back to you soon"
+msgstr ""
+
+#: core/forms.py:21 core/models.py:51
+msgid "Street"
+msgstr ""
+
+#: core/forms.py:26
+msgid "House Number"
+msgstr ""
+
+#: core/forms.py:30 core/models.py:55
+msgid "Zipcode"
+msgstr ""
+
+#: core/forms.py:35 core/models.py:57
+#: core/templates/core/partials/_search.html:23
+#: core/templates/core/partials/_search.html:30
+msgid "City"
+msgstr ""
+
+#: core/libs/core_libs.py:13 core/libs/core_libs.py:22
+msgid "No Image Found"
+msgstr ""
+
+#: core/models.py:16 core/models.py:32 core/models.py:34
+msgid "Country"
+msgstr ""
+
+#: core/models.py:17
+msgid "Countries"
+msgstr ""
+
+#: core/models.py:40 core/models.py:60
+#: core/templates/core/partials/_search.html:37
+#: core/templates/snippeys/snippets.html:18
+msgid "State"
+msgstr ""
+
+#: core/models.py:41
+msgid "States"
+msgstr ""
+
+#: core/models.py:53
+msgid "House number"
+msgstr ""
+
+#: core/models.py:64
+msgid "Addresses"
+msgstr ""
+
+#: core/templates/core/about.html:13 core/templates/core/about.html:29
+#: core/templates/core/partials/_navbar.html:31
+msgid "About"
+msgstr ""
+
+#: core/templates/core/about.html:14
+msgid "Real Estate and Consulting"
+msgstr ""
+
+#: core/templates/core/about.html:39
+msgid "We Search For The Perfect Home"
+msgstr ""
+
+#: core/templates/core/about.html:41 core/templates/core/about.html:47
+#: core/templates/core/about.html:54 core/templates/core/about.html:62
+#: core/templates/core/about.html:64 core/templates/core/about.html:65
+#: core/templates/core/about.html:66 core/templates/core/index.html:55
+#: core/templates/core/index.html:63 core/templates/core/index.html:71
+msgid "Placeholder"
+msgstr ""
+
+#: core/templates/core/about.html:71
+msgid "Management"
+msgstr ""
+
+#: core/templates/core/about.html:94
+msgid "Cooperation"
+msgstr ""
+
+#: core/templates/core/about.html:111
+msgid "We Work For You"
+msgstr ""
+
+#: core/templates/core/about.html:113
+msgid "View Our Featured Listings"
+msgstr ""
+
+#: core/templates/core/about.html:121
+msgid "Our Team"
+msgstr ""
+
+#: core/templates/core/impressum.html:13 core/templates/core/impressum.html:28
+#: core/templates/core/partials/_footer.html:11
+#: core/templates/snippeys/_footer.html:11
+msgid "Impressum"
+msgstr ""
+
+#: core/templates/core/index.html:16
+msgid "Property Searching Just Got So Easy"
+msgstr "Immobilensuche einfach gemacht"
+
+#: core/templates/core/index.html:18
+msgid "Extraordinary properties across asset classes"
+msgstr ""
+
+#: core/templates/core/index.html:32
+msgid "Latest Listings"
+msgstr ""
+
+#: core/templates/core/index.html:40
+#: listings/templates/listings/listings.html:45
+#: listings/templates/_partials/_search.html:47
+msgid "No Listings Available"
+msgstr ""
+
+#: core/templates/core/index.html:54
+msgid "Consulting Services"
+msgstr ""
+
+#: core/templates/core/index.html:62
+msgid "Propery Management"
+msgstr ""
+
+#: core/templates/core/index.html:70
+msgid "Renting & Selling"
+msgstr ""
+
+#: core/templates/core/partials/_alerts.html:8
+msgid "Error"
+msgstr ""
+
+#: core/templates/core/partials/_footer.html:14
+#: core/templates/core/privacy.html:13 core/templates/core/privacy.html:28
+#: core/templates/snippeys/_footer.html:14
+msgid "Privacy"
+msgstr ""
+
+#: core/templates/core/partials/_navbar.html:44
+msgid "Featured Listings"
+msgstr ""
+
+#: core/templates/core/partials/_navbar.html:55
+msgid "Admin"
+msgstr ""
+
+#: core/templates/core/partials/_navbar.html:85
+msgid "Logout"
+msgstr ""
+
+#: core/templates/core/partials/btn_save_back.html:2
+msgid "Save"
+msgstr ""
+
+#: core/templates/core/partials/_search.html:10
+msgid "Keywords"
+msgstr ""
+
+#: core/templates/core/partials/_search.html:18
+msgid "Keyword (Pool, Garage, etc)"
+msgstr ""
+
+#: core/templates/core/partials/_search.html:45
+#: core/templates/snippeys/snippets.html:21
+msgid "States (All)"
+msgstr ""
+
+#: core/templates/core/partials/_search.html:56
+#: core/templates/snippeys/snippets.html:32
+msgid "Type"
+msgstr ""
+
+#: core/templates/core/partials/_search.html:64
+#: core/templates/snippeys/snippets.html:35
+msgid "Type (All)"
+msgstr ""
+
+#: core/templates/core/partials/_search.html:75
+msgid "Min Bedrooms"
+msgstr ""
+
+#: core/templates/core/partials/_search.html:90
+msgid "Min Bathrooms"
+msgstr ""
+
+#: core/templates/core/partials/_search.html:105
+#: core/templates/core/partials/_search.html:112
+msgid "Min m²"
+msgstr ""
+
+#: core/templates/core/partials/_search.html:119
+#: core/templates/core/partials/_search.html:126
+msgid "Max price"
+msgstr ""
+
+#: core/templates/core/partials/_search.html:138
+msgid "Search"
+msgstr ""
+
+#: core/templates/snippeys/inquiry copy.html:14 copy.html:25
+msgid "Make An Inquiry"
+msgstr ""
+
+#: documents/models.py:11
+msgid "Name"
+msgstr ""
+
+#: documents/models.py:13 listings/models.py:145
+msgid "Short description"
+msgstr ""
+
+#: documents/models.py:15
+msgid "File"
+msgstr ""
+
+#: documents/models.py:17 listings/models.py:75 listings/models.py:147
+msgid "Created"
+msgstr ""
+
+#: documents/models.py:19 listings/models.py:77
+msgid "Updated"
+msgstr ""
+
+#: documents/models.py:21
+msgid "For customers"
+msgstr ""
+
+#: documents/templates/documents/documents.html:14
+msgid "Documents for"
+msgstr ""
+
+#: documents/templates/documents/documents.html:50
+msgid "Back To Listing"
+msgstr ""
+
+#: listings/models.py:37
+msgid "R"
+msgstr ""
+
+#: listings/models.py:37
+msgid "Rent"
+msgstr ""
+
+#: listings/models.py:38
+msgid "S"
+msgstr ""
+
+#: listings/models.py:38
+msgid "Sell"
+msgstr ""
+
+#: listings/models.py:45
+msgid "Listing type"
+msgstr ""
+
+#: listings/models.py:49
+msgid "Title"
+msgstr ""
+
+#: listings/models.py:56 listings/models.py:99
+#: listings/templates/listings/listing.html:152
+msgid "Price"
+msgstr ""
+
+#: listings/models.py:58 listings/templates/listings/listing.html:137
+msgid "Ceiling height"
+msgstr ""
+
+#: listings/models.py:59 listings/templates/listings/_partials/_listing-box.html:40
+#: listings/templates/listings/listing.html:121
+msgid "Bedrooms"
+msgstr ""
+
+#: listings/models.py:60 listings/templates/listings/_partials/_listing-box.html:42
+#: listings/templates/listings/listing.html:126
+msgid "Bathrooms"
+msgstr ""
+
+#: listings/models.py:62 listings/templates/listings/_partials/_listing-box.html:36
+#: listings/templates/listings/listing.html:131
+msgid "Garage"
+msgstr ""
+
+#: listings/models.py:63 listings/models.py:103
+#: listings/templates/listings/_partials/_listing-box.html:34
+#: listings/templates/listings/listing.html:158
+#: listings/templates/listings/listing.html:164
+msgid "m²"
+msgstr ""
+
+#: listings/models.py:64
+msgid "Lot size"
+msgstr ""
+
+#: listings/models.py:66 listings/models.py:112 listings/models.py:143
+#: listings/models.py:155
+msgid "Image"
+msgstr ""
+
+#: listings/models.py:68
+msgid "Listing for"
+msgstr ""
+
+#: listings/models.py:70
+msgid "Monument Protected"
+msgstr ""
+
+#: listings/models.py:71
+msgid "Online"
+msgstr ""
+
+#: listings/models.py:73 listings/templates/listings/listing.html:168
+msgid "Free from"
+msgstr ""
+
+#: listings/models.py:84
+msgid "Immediatly"
+msgstr ""
+
+#: listings/models.py:90
+msgid "# Rooms"
+msgstr ""
+
+#: listings/models.py:102
+msgid "{} m²"
+msgstr ""
+
+#: listings/models.py:107
+msgid "Ceiling Height"
+msgstr ""
+
+#: listings/models.py:117 listings/models.py:160
+msgid "Preview"
+msgstr ""
+
+#: listings/models.py:124
+msgid "# Images"
+msgstr ""
+
+#: listings/models.py:129
+msgid "# Files"
+msgstr ""
+
+#: listings/templates/listings/_partials/_listing-box.html:45
+msgid "More Info"
+msgstr ""
+
+#: listings/templates/listings/listing.html:34
+msgid "Listings"
+msgstr ""
+
+#: listings/templates/listings/listing.html:51
+msgid "Back To Listings"
+msgstr ""
+
+#: listings/templates/listings/listing.html:102
+msgid "This object is listed"
+msgstr ""
+
+#: listings/templates/listings/listing.html:108
+msgid "This object is not listed"
+msgstr ""
+
+#: listings/templates/listings/listing.html:138
+msgid "m"
+msgstr ""
+
+#: listings/templates/listings/listing.html:157
+msgid "Square Feet"
+msgstr ""
+
+#: listings/templates/listings/listing.html:163
+msgid "Lot Size"
+msgstr ""
+
+#: listings/templates/listings/listing.html:185
+msgid "Object from the "
+msgstr ""
+
+#: listings/templates/listings/listings.html:13
+msgid "Browse Our Properties"
+msgstr ""
+
+#: listings/templates/listings/listings.html:29
+#: listings/templates/_partials/_search.html:29
+msgid "Browse Listings"
+msgstr ""
+
+#: listings/templates/_partials/_search.html:31
+msgid "Search Results"
+msgstr ""
+
+#: project/settings.py:246
+msgid "German"
+msgstr ""
+
+#: project/settings.py:247
+msgid "English"
+msgstr ""
