@@ -86,7 +86,7 @@ class AdminEmailHandler(logging.Handler):
         super().__init__()
         self.include_html = include_html
         self.email_backend = email_backend
-        self.reporter_class = import_string(reporter_class or 'django.views.debug.ExceptionReporter')
+        self.reporter_class = import_string(reporter_class or settings.DEFAULT_EXCEPTION_REPORTER)
 
     def emit(self, record):
         try:
@@ -160,6 +160,8 @@ class RequireDebugTrue(logging.Filter):
 
 
 class ServerFormatter(logging.Formatter):
+    default_time_format = '%d/%b/%Y %H:%M:%S'
+
     def __init__(self, *args, **kwargs):
         self.style = color_style()
         super().__init__(*args, **kwargs)

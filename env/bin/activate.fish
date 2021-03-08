@@ -29,7 +29,7 @@ end
 # unset irrelevant variables
 deactivate nondestructive
 
-set -gx VIRTUAL_ENV "/Users/nima/github/Django-RealEstate/env"
+set -gx VIRTUAL_ENV "/Users/nima/Desktop/real-estate-manager-django-master/env"
 
 set -gx _OLD_VIRTUAL_PATH $PATH
 set -gx PATH "$VIRTUAL_ENV/bin" $PATH

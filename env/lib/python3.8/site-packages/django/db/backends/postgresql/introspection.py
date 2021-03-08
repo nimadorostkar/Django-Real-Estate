@@ -1,7 +1,7 @@
 from django.db.backends.base.introspection import (
     BaseDatabaseIntrospection, FieldInfo, TableInfo,
 )
-from django.db.models.indexes import Index
+from django.db.models import Index
 
 
 class DatabaseIntrospection(BaseDatabaseIntrospection):
@@ -26,6 +26,7 @@ class DatabaseIntrospection(BaseDatabaseIntrospection):
         1266: 'TimeField',
         1700: 'DecimalField',
         2950: 'UUIDField',
+        3802: 'JSONField',
     }
 
     ignored_tables = []

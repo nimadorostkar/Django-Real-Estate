@@ -1,8 +1,7 @@
 from django.contrib.gis.db.models.fields import (
     ExtentField, GeometryCollectionField, GeometryField, LineStringField,
 )
-from django.db.models import Value
-from django.db.models.aggregates import Aggregate
+from django.db.models import Aggregate, Value
 from django.utils.functional import cached_property
 
 __all__ = ['Collect', 'Extent', 'Extent3D', 'MakeLine', 'Union']

@@ -89,11 +89,11 @@ class MigrationAutodetector:
     def only_relation_agnostic_fields(self, fields):
         """
         Return a definition of the fields that ignores field names and
-        what related fields actually relate to. Used for detecting renames (as,
-        of course, the related fields change during renames).
+        what related fields actually relate to. Used for detecting renames (as
+        the related fields change during renames).
         """
         fields_def = []
-        for name, field in sorted(fields):
+        for name, field in sorted(fields.items()):
             deconstruction = self.deep_deconstruct(field)
             if field.remote_field and field.remote_field.model:
                 del deconstruction[2]['to']
@@ -208,17 +208,17 @@ class MigrationAutodetector:
         self.kept_unmanaged_keys = self.old_unmanaged_keys & self.new_unmanaged_keys
         self.through_users = {}
         self.old_field_keys = {
-            (app_label, model_name, x)
+            (app_label, model_name, field_name)
             for app_label, model_name in self.kept_model_keys
-            for x, y in self.from_state.models[
+            for field_name in self.from_state.models[
                 app_label,
                 self.renamed_models.get((app_label, model_name), model_name)
             ].fields
         }
         self.new_field_keys = {
-            (app_label, model_name, x)
+            (app_label, model_name, field_name)
             for app_label, model_name in self.kept_model_keys
-            for x, y in self.to_state.models[app_label, model_name].fields
+            for field_name in self.to_state.models[app_label, model_name].fields
         }
 
     def _generate_through_model_map(self):
@@ -226,7 +226,7 @@ class MigrationAutodetector:
         for app_label, model_name in sorted(self.old_model_keys):
             old_model_name = self.renamed_models.get((app_label, model_name), model_name)
             old_model_state = self.from_state.models[app_label, old_model_name]
-            for field_name, field in old_model_state.fields:
+            for field_name in old_model_state.fields:
                 old_field = self.old_apps.get_model(app_label, old_model_name)._meta.get_field(field_name)
                 if (hasattr(old_field, "remote_field") and getattr(old_field.remote_field, "through", None) and
                         not old_field.remote_field.through._meta.auto_created):
@@ -369,7 +369,7 @@ class MigrationAutodetector:
         # Optimize migrations
         for app_label, migrations in self.migrations.items():
             for migration in migrations:
-                migration.operations = MigrationOptimizer().optimize(migration.operations, app_label=app_label)
+                migration.operations = MigrationOptimizer().optimize(migration.operations, app_label)
 
     def check_dependency(self, operation, dependency):
         """
@@ -496,10 +496,13 @@ class MigrationAutodetector:
                                 dependencies=dependencies,
                             )
                             self.renamed_models[app_label, model_name] = rem_model_name
-                            renamed_models_rel_key = '%s.%s' % (rem_model_state.app_label, rem_model_state.name)
+                            renamed_models_rel_key = '%s.%s' % (
+                                rem_model_state.app_label,
+                                rem_model_state.name_lower,
+                            )
                             self.renamed_models_rel[renamed_models_rel_key] = '%s.%s' % (
                                 model_state.app_label,
-                                model_state.name,
+                                model_state.name_lower,
                             )
                             self.old_model_keys.remove((rem_app_label, rem_model_name))
                             self.old_model_keys.add((app_label, model_name))
@@ -560,6 +563,16 @@ class MigrationAutodetector:
                 if isinstance(base, str) and "." in base:
                     base_app_label, base_name = base.split(".", 1)
                     dependencies.append((base_app_label, base_name, None, True))
+                    # Depend on the removal of base fields if the new model has
+                    # a field with the same name.
+                    old_base_model_state = self.from_state.models.get((base_app_label, base_name))
+                    new_base_model_state = self.to_state.models.get((base_app_label, base_name))
+                    if old_base_model_state and new_base_model_state:
+                        removed_base_fields = set(old_base_model_state.fields).difference(
+                            new_base_model_state.fields,
+                        ).intersection(model_state.fields)
+                        for removed_base_field in removed_base_fields:
+                            dependencies.append((base_app_label, base_name, removed_base_field, False))
             # Depend on the other end of the primary key if it's a relation
             if primary_key_rel:
                 dependencies.append((
@@ -573,7 +586,7 @@ class MigrationAutodetector:
                 app_label,
                 operations.CreateModel(
                     name=model_state.name,
-                    fields=[d for d in model_state.fields if d[0] not in related_fields],
+                    fields=[d for d in model_state.fields.items() if d[0] not in related_fields],
                     options=model_state.options,
                     bases=model_state.bases,
                     managers=model_state.managers,
@@ -673,9 +686,8 @@ class MigrationAutodetector:
     def generate_created_proxies(self):
         """
         Make CreateModel statements for proxy models. Use the same statements
-        as that way there's less code duplication, but of course for proxy
-        models it's safe to skip all the pointless field stuff and just chuck
-        out an operation.
+        as that way there's less code duplication, but for proxy models it's
+        safe to skip all the pointless field stuff and chuck out an operation.
         """
         added = self.new_proxy_keys - self.old_proxy_keys
         for app_label, model_name in sorted(added):
@@ -817,7 +829,7 @@ class MigrationAutodetector:
             field_dec = self.deep_deconstruct(field)
             for rem_app_label, rem_model_name, rem_field_name in sorted(self.old_field_keys - self.new_field_keys):
                 if rem_app_label == app_label and rem_model_name == model_name:
-                    old_field = old_model_state.get_field_by_name(rem_field_name)
+                    old_field = old_model_state.fields[rem_field_name]
                     old_field_dec = self.deep_deconstruct(old_field)
                     if field.remote_field and field.remote_field.model and 'to' in old_field_dec[2]:
                         old_rel_to = old_field_dec[2]['to']
@@ -1323,5 +1335,5 @@ class MigrationAutodetector:
         """
         match = re.match(r'^\d+', name)
         if match:
-            return int(match.group())
+            return int(match[0])
         return None

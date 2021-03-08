@@ -37,7 +37,7 @@ deactivate () {
 # unset irrelevant variables
 deactivate nondestructive
 
-VIRTUAL_ENV="/Users/nima/github/Django-RealEstate/env"
+VIRTUAL_ENV="/Users/nima/Desktop/real-estate-manager-django-master/env"
 export VIRTUAL_ENV
 
 _OLD_VIRTUAL_PATH="$PATH"

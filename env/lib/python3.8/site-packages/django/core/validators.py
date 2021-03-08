@@ -6,24 +6,12 @@ from urllib.parse import urlsplit, urlunsplit
 from django.core.exceptions import ValidationError
 from django.utils.deconstruct import deconstructible
 from django.utils.encoding import punycode
-from django.utils.functional import SimpleLazyObject
 from django.utils.ipv6 import is_valid_ipv6_address
+from django.utils.regex_helper import _lazy_re_compile
 from django.utils.translation import gettext_lazy as _, ngettext_lazy
 
 # These values, if given to validate(), will trigger the self.required check.
 EMPTY_VALUES = (None, '', [], (), {})
-
-
-def _lazy_re_compile(regex, flags=0):
-    """Lazily compile a regex with flags."""
-    def _compile():
-        # Compile the regex if it was not passed pre-compiled.
-        if isinstance(regex, str):
-            return re.compile(regex, flags)
-        else:
-            assert not flags, "flags must be empty if regex is passed pre-compiled"
-            return regex
-    return SimpleLazyObject(_compile)
 
 
 @deconstructible
@@ -73,11 +61,11 @@ class RegexValidator:
 
 @deconstructible
 class URLValidator(RegexValidator):
-    ul = '\u00a1-\uffff'  # unicode letters range (must not be a raw string)
+    ul = '\u00a1-\uffff'  # Unicode letters range (must not be a raw string).
 
     # IP patterns
     ipv4_re = r'(?:25[0-5]|2[0-4]\d|[0-1]?\d?\d)(?:\.(?:25[0-5]|2[0-4]\d|[0-1]?\d?\d)){3}'
-    ipv6_re = r'\[[0-9a-f:\.]+\]'  # (simple regex, validated later)
+    ipv6_re = r'\[[0-9a-f:.]+\]'  # (simple regex, validated later)
 
     # Host patterns
     hostname_re = r'[a-z' + ul + r'0-9](?:[a-z' + ul + r'0-9-]{0,61}[a-z' + ul + r'0-9])?'
@@ -94,7 +82,7 @@ class URLValidator(RegexValidator):
     host_re = '(' + hostname_re + domain_re + tld_re + '|localhost)'
 
     regex = _lazy_re_compile(
-        r'^(?:[a-z0-9\.\-\+]*)://'  # scheme is validated separately
+        r'^(?:[a-z0-9.+-]*)://'  # scheme is validated separately
         r'(?:[^\s:@/]+(?::[^\s:@/]*)?@)?'  # user:pass authentication
         r'(?:' + ipv4_re + '|' + ipv6_re + '|' + host_re + ')'
         r'(?::\d{2,5})?'  # port
@@ -109,7 +97,9 @@ class URLValidator(RegexValidator):
             self.schemes = schemes
 
     def __call__(self, value):
-        # Check first if the scheme is valid
+        if not isinstance(value, str):
+            raise ValidationError(self.message, code=self.code)
+        # Check if the scheme is valid.
         scheme = value.split('://')[0].lower()
         if scheme not in self.schemes:
             raise ValidationError(self.message, code=self.code)
@@ -136,7 +126,7 @@ class URLValidator(RegexValidator):
             # Now verify IPv6 in the netloc part
             host_match = re.search(r'^\[(.+)\](?::\d{2,5})?$', urlsplit(value).netloc)
             if host_match:
-                potential_ip = host_match.groups()[0]
+                potential_ip = host_match[1]
                 try:
                     validate_ipv6_address(potential_ip)
                 except ValidationError:
@@ -175,7 +165,7 @@ class EmailValidator:
         re.IGNORECASE)
     literal_regex = _lazy_re_compile(
         # literal form, ipv4 or ipv6 address (SMTP 4.1.3)
-        r'\[([A-f0-9:\.]+)\]\Z',
+        r'\[([A-f0-9:.]+)\]\Z',
         re.IGNORECASE)
     domain_whitelist = ['localhost']
 
@@ -214,7 +204,7 @@ class EmailValidator:
 
         literal_match = self.literal_regex.match(domain_part)
         if literal_match:
-            ip_address = literal_match.group(1)
+            ip_address = literal_match[1]
             try:
                 validate_ipv46_address(ip_address)
                 return True
@@ -324,8 +314,9 @@ class BaseValidator:
             raise ValidationError(self.message, code=self.code, params=params)
 
     def __eq__(self, other):
+        if not isinstance(other, self.__class__):
+            return NotImplemented
         return (
-            isinstance(other, self.__class__) and
             self.limit_value == other.limit_value and
             self.message == other.message and
             self.code == other.code

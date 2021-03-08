@@ -50,6 +50,8 @@ class AdminSite:
     # URL for the "View site" link at the top of each admin page.
     site_url = '/'
 
+    enable_nav_sidebar = True
+
     _empty_value_display = '-'
 
     login_form = None
@@ -238,11 +240,11 @@ class AdminSite:
         return update_wrapper(inner, view)
 
     def get_urls(self):
-        from django.urls import include, path, re_path
         # Since this module gets imported in the application's root package,
         # it cannot import models from other applications at the module level,
         # and django.contrib.contenttypes.views imports ContentType.
         from django.contrib.contenttypes import views as contenttype_views
+        from django.urls import include, path, re_path
 
         def wrap(view, cacheable=False):
             def wrapper(*args, **kwargs):
@@ -309,6 +311,7 @@ class AdminSite:
             'has_permission': self.has_permission(request),
             'available_apps': self.get_app_list(request),
             'is_popup': False,
+            'is_nav_sidebar_enabled': self.enable_nav_sidebar,
         }
 
     def password_change(self, request, extra_context=None):
@@ -382,11 +385,11 @@ class AdminSite:
             index_path = reverse('admin:index', current_app=self.name)
             return HttpResponseRedirect(index_path)
 
-        from django.contrib.auth.views import LoginView
         # Since this module gets imported in the application's root package,
         # it cannot import models from other applications at the module level,
         # and django.contrib.admin.forms eventually imports User.
         from django.contrib.admin.forms import AdminAuthenticationForm
+        from django.contrib.auth.views import LoginView
         context = {
             **self.each_context(request),
             'title': _('Log in'),

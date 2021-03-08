@@ -9,6 +9,7 @@ import binascii
 import cgi
 import collections
 import html
+import os
 from urllib.parse import unquote
 
 from django.conf import settings
@@ -208,6 +209,7 @@ class MultiPartParser:
                     # This is a file, use the handler...
                     file_name = disposition.get('filename')
                     if file_name:
+                        file_name = os.path.basename(file_name)
                         file_name = force_str(file_name, encoding, errors='replace')
                         file_name = self.IE_sanitize(html.unescape(file_name))
                     if not file_name:
@@ -664,12 +666,12 @@ def parse_header(line):
                 if p.count(b"'") == 2:
                     has_encoding = True
             value = p[i + 1:].strip()
-            if has_encoding:
-                encoding, lang, value = value.split(b"'")
-                value = unquote(value.decode(), encoding=encoding.decode())
             if len(value) >= 2 and value[:1] == value[-1:] == b'"':
                 value = value[1:-1]
                 value = value.replace(b'\\\\', b'\\').replace(b'\\"', b'"')
+            if has_encoding:
+                encoding, lang, value = value.split(b"'")
+                value = unquote(value.decode(), encoding=encoding.decode())
             pdict[name] = value
     return key, pdict
 
