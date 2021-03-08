@@ -27,7 +27,7 @@ class Listening(models.Model):
     class Meta:
         ordering = ('-created',)
         index_together = (('id', 'slug'),)
-    
+
     def __str__(self):
         return self.title
 
@@ -37,9 +37,10 @@ class Listening(models.Model):
 class Quickcontact(models.Model):
     email = models.EmailField()
     textarea = models.TextField(max_length=200)
-    
+
     def __str__(self):
         return self.email
+
 
 
 class AgentContact(models.Model):
@@ -50,4 +51,3 @@ class AgentContact(models.Model):
 
     def __str__(self):
         return self.user_name
-    
