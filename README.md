@@ -62,3 +62,5 @@ python manage.py runserver
 ![Items](https://github.com/nimadorostkar/Django-RealEstate/blob/master/screenshots/1.png)
 
 ![Admin](https://github.com/nimadorostkar/Django-RealEstate/blob/master/screenshots/3.png)
+
+![Admin](https://github.com/nimadorostkar/Django-RealEstate/blob/master/screenshots/4.png)
