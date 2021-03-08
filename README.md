@@ -13,9 +13,7 @@ A full featured real estate website. that let user find properties in the prefer
 * You can sell your house/flat
 * User-friendly.
 
-
-
-
+<hr>
 
 ## How to run this project
 
@@ -52,10 +50,10 @@ python manage.py migrate
 python manage.py runserver
 ```
 
+<hr>
 
 
 ### Screenshots
-
 
 ![Home](https://github.com/nimadorostkar/Django-RealEstate/blob/master/screenshots/1.png)
 
