@@ -6,6 +6,7 @@ from listings.models import Listing
 from contacts.models import Contact
 
 
+
 class UserDocumentView(DetailView):
     model = Listing
     template_name = 'documents/documents.html'
