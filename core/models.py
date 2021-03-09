@@ -20,6 +20,7 @@ class Country(models.Model):
         return f'{self.name}'
 
 
+
 # ==================================================================== >> STATE
 class State(models.Model):
     """State Model.
