@@ -4,6 +4,7 @@ from django.conf import settings
 from django.utils.translation import ugettext_lazy as _
 
 
+
 class Contact(models.Model):
     listing = models.ForeignKey('listings.Listing',
                                 on_delete=models.DO_NOTHING,
@@ -32,6 +33,7 @@ class Contact(models.Model):
     get_email.short_description = _("Email")
 
 
+    
 class ChatMessage(models.Model):
     contact = models.ForeignKey(Contact, on_delete=models.PROTECT,
                                 verbose_name=_("Contact listing"))
