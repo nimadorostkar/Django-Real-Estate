@@ -45,6 +45,7 @@ class State(models.Model):
         return (f"{self.name} - {self.country.name}")
 
 
+
 # ================================================================== >> ADDRESS
 class Address(models.Model):
     """Address Model."""
@@ -59,6 +60,7 @@ class Address(models.Model):
     state = models.ForeignKey(
         State, blank=False, null=False, on_delete=models.CASCADE,
         verbose_name=_("State"))
+
 
     class Meta:
         unique_together = ('street', 'hn', 'zipcode')
