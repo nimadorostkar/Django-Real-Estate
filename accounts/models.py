@@ -6,6 +6,7 @@ from django.utils.translation import ugettext_lazy as _
 from django.urls import reverse
 
 
+
 class CustomUserManager(BaseUserManager):
     """
     Custom user model manager where email is the unique identifiers
@@ -39,6 +40,7 @@ class CustomUserManager(BaseUserManager):
         return self.create_user(email, password, **extra_fields)
 
 
+    
 class CustomUser(AbstractUser):
     first_name = models.CharField(max_length=255, null=True,
                                   verbose_name=_("Firstname"))
@@ -88,3 +90,6 @@ class Realtor(models.Model):
     class Meta:
         verbose_name = _("Realtor")
         verbose_name_plural = _("Realtors")
+
+        
+        
