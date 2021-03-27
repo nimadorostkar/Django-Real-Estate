@@ -94,5 +94,6 @@ class ImpressumView(TemplateView):
         return context
 
 
+
 class RobotsTXTView(TemplateView):
     template_name = 'core/robots.txt'
