@@ -7,6 +7,7 @@ from django.urls import reverse
 
 
 
+
 class CustomUserManager(BaseUserManager):
     """
     Custom user model manager where email is the unique identifiers
