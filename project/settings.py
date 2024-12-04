@@ -3,8 +3,6 @@ from pathlib import Path
 from django.contrib.messages import constants as messages
 
 
-
-# Build paths inside the project like this: os.path.join(BASE_DIR, ...)
 # BASE_DIR = os.path.dirname(os.path.dirname(os.path.abspath(__file__)))
 BASE_DIR = Path(__file__).resolve().parent.parent
 
