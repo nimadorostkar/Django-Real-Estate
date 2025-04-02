@@ -1,11 +1,6 @@
 from django.db import models
 from django.utils.translation import gettext_lazy as _
 
-
-
-
-
-# ================================================================== >> COUNTRY
 class Country(models.Model):
     """Country Model."""
 
@@ -24,7 +19,6 @@ class Country(models.Model):
 
 
 
-# ==================================================================== >> STATE
 class State(models.Model):
     """State Model.
     Example:
@@ -49,7 +43,6 @@ class State(models.Model):
 
 
 
-# ================================================================== >> ADDRESS
 class Address(models.Model):
     """Address Model."""
     street = models.CharField(max_length=150, blank=False, null=False,
